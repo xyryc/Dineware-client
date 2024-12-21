@@ -29,10 +29,10 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
 #### **Layout & Page Structure**
 
 1. **Navbar**  
-* **Website name/logo**  
-* **Home**  
-* **All Foods**  
-* **Gallery**  
+* **Website name/logo**  ✅
+* **Home**  ✅
+* **All Foods**  ✅
+* **Gallery**  ✅
 * **Conditional login/logout**  
 *  **Profile Image**. This will only show if the user is logged in, Otherwise show a login button. [Click Here for more details on this](#profile-image-functionalities)  
 2. **Main Section**:  Main Section will show different pages based on routes.    
