@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
@@ -10,7 +10,7 @@ const PurchaseFood = () => {
   const { id } = useParams();
   const { user } = useContext(AuthContext);
 
-  const { data: singleFood, isLoading } = useQuery({
+  const { data: singleFood, isFetching } = useQuery({
     queryKey: ["singleFood"],
     queryFn: async () => {
       const { data } = await axios.get(
@@ -20,11 +20,25 @@ const PurchaseFood = () => {
     },
   });
 
-  if (isLoading) {
+  const { mutateAsync, isLoading } = useMutation({
+    mutationFn: async (orderData) => {
+      await axios.post(`${import.meta.env.VITE_API_URL}/order`, orderData);
+    },
+
+    onSuccess: () => {
+      toast.success("Order placed successfully!");
+    },
+
+    onError: () => {
+      toast.error("Failed to place order");
+    },
+  });
+
+  if (isLoading || isFetching) {
     return <LoadingSpinner />;
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const form = e.target;
@@ -39,8 +53,8 @@ const PurchaseFood = () => {
       buyingDate: Date.now(),
     };
 
-    console.log(purchaseData);
-    toast.success("Purchase successful!");
+    // send order to backend
+    await mutateAsync(purchaseData);
   };
 
   return (
