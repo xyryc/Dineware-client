@@ -8,9 +8,9 @@ const Main = () => {
     <div>
       <Navbar />
 
-      <ScrollToTop/>
+      <ScrollToTop />
       {/* Outlet */}
-      <div className="min-h-[calc(100vh-306px)]">
+      <div className="min-h-[calc(100vh-340px)]">
         <Outlet />
       </div>
 
