@@ -6,6 +6,7 @@ import Login from "../pages/Authentication/Login";
 import AllFoods from "../pages/AllFoods";
 import FoodDetails from "../pages/FoodDetails";
 import PurchaseFood from "../pages/PurchaseFood";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/food/purchase/:id",
-        element: <PurchaseFood />,
+        element: (
+          <PrivateRoutes>
+            <PurchaseFood />
+          </PrivateRoutes>
+        ),
       },
     ],
   },

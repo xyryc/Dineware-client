@@ -13,8 +13,6 @@ const AllFoods = () => {
     },
   });
 
-  console.log(foods);
-
   if (isLoading) {
     return <LoadingSpinner />;
   }
@@ -35,7 +33,7 @@ const AllFoods = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-6 container mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 container mx-auto px-4">
         {foods?.map((food) => (
           <div key={food._id} className="border border-gray-300 rounded-md p-4">
             {/* product image */}

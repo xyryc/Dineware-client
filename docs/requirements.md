@@ -95,7 +95,7 @@ This page will have a form containing the following information:
 - Buying Date (This will not be an input field. The current time will be automatically added to the database. You can use Date.now() to achieve this) ✅
 - **Purchase** button ✅
 
-📝Note: On clicking the purchase button the information will be stored in the database. Also, On a successful order, you have to show a toast/alert (do not use browser alert).
+📝Note: On clicking the purchase button the information will be stored in the database. Also, On a successful order, you have to show a toast/alert (do not use browser alert). ✅
 
 **Gallery Page (public)**
 
@@ -107,7 +107,7 @@ This page will have a form containing the following information:
 
 # In this route, you have to show all food items added by the currently logged-in user (💡hints: You have to filter data based on the user's email). You can show all the food items in tabular/card. Each row/card will have:
 
-- Some Food info (example: food img, name, price, etc)
+- Some Food info (example: food img, name, price, etc) 
 - an update button/icon.
 
 📝 clicking the update button/icon will redirect to the update page or open a modal. There will be a form that has the food info and an update button. When clicking the update button the product info will be updated. Don’t let other users update your added food items.
