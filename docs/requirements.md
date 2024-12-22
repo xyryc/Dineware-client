@@ -63,7 +63,7 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
   - See All Button: Below the 6 cards, there will be a see all button that will redirect the user to the All Foods page.
 - **Extra section**: Add 2(Two) relevant and attractive sections except the nav, banner, footer, and Top Food section.
 
-**All foods page (public)**
+**All foods page (public)** ✅
 
 - ### **Page Title**: The background and the center of the section will have the page name. [Demo](https://i.ibb.co/dLgT64B/Screenshot-2024-05-06-143639.png) ✅
 
@@ -77,17 +77,17 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
 - Quantity (See challenge part for more info 👇) ✅
 - _Details Button_. On clicking this _button_ will navigate to the Single Food Page. ✅
 
-**Single Food Page (public)**  
+**Single Food Page (public)** ✅
 Show details all information about a single food item including the following informations and additionally ✅
 
 - Purchase Count. Indicates the number of time the food was purchased, by default 0 ✅
 - Purchase button. Clicking this button will redirect users to the food purchase ✅
 
-# **Food Purchase Page (private)**
+# **Food Purchase Page (private)** ✅
 
 This page will have a form containing the following information:
 
-- Food Name  ✅
+- Food Name ✅
 - Price ✅
 - Quantity ✅
 - Buyer Name (Read-only. This will be picked from the logged-in user's information) ✅
@@ -107,28 +107,28 @@ This page will have a form containing the following information:
 
 # In this route, you have to show all food items added by the currently logged-in user (💡hints: You have to filter data based on the user's email). You can show all the food items in tabular/card. Each row/card will have:
 
-- Some Food info (example: food img, name, price, etc) 
+- Some Food info (example: food img, name, price, etc)
 - an update button/icon.
 
 📝 clicking the update button/icon will redirect to the update page or open a modal. There will be a form that has the food info and an update button. When clicking the update button the product info will be updated. Don’t let other users update your added food items.
 
-**Add Food Page (Private)**
+# **Add Food Page (Private)**
 
 This page will have a form having the following fields:
 
-1. Food Name
-2. Food Image
-3. Food Category
+1. Food Name ✅
+2. Food Image ✅
+3. Food Category ✅
 4. quantity
-5. Price
-6. Add By (name & email: this info added from currently logged-in user. )
-7. Food Origin (Country)
-8. A short description of the food item ( ingredients, making procedure, etc. )
-9. Add Item Button
+5. Price ✅
+6. Add By (name & email: this info added from currently logged-in user. ) ✅
+7. Food Origin (Country)✅
+8. A short description of the food item ( ingredients, making procedure, etc. ) ✅
+9. Add Item Button ✅
 
 📝 on clicking the add button the information will be stored in the database. On successfully adding a food item, you have to show a toast/alert _(do not use browser alert)_
 
-**My Orders (Private)**
+# **My Orders (Private)**
 
 In this route, show all food items ordered by the logged-in user. You have to filter the data based on the logged-in user email. You can show all the food items on the table/card. Each row/card will have:
 
@@ -177,3 +177,7 @@ Some Guidelines:
 4. Stay calm, think before coding, and work sequentially. You will make it.
 5. Be strategic about the electricity issue.
 6. use chat gpt to generate JSON data. You can use chatGPT for Other purposes as well.
+
+# TODO
+
+- purchase page validation

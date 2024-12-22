@@ -80,7 +80,7 @@ const Navbar = () => {
                   <a>My Foods</a>
                 </li>
                 <li>
-                  <a>Add food</a>
+                  <Link to="/add-food">Add food</Link>
                 </li>
                 <li>
                   <a>My Orders</a>
