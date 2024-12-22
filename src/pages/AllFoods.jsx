@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const AllFoods = () => {
   const { data: foods, isLoading } = useQuery({
-    queryKey: ["food"],
+    queryKey: ["foods"],
     queryFn: async () => {
       const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/foods`);
       return data;
