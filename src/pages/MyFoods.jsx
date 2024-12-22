@@ -6,6 +6,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import LoadingSpinner from "../components/LoadingSpinner";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
+import { MdOutlineEdit } from "react-icons/md";
 
 const MyFoods = () => {
   const { user } = useContext(AuthContext);
@@ -47,12 +48,13 @@ const MyFoods = () => {
             <tr>
               <th></th>
               <th>Index</th>
+              <th>Image</th>
               <th>Name</th>
               <th>Category</th>
               <th>Price</th>
               <th>Quantity</th>
               <th>Added by</th>
-              <th>Details</th>
+              <th>Update</th>
             </tr>
           </thead>
           <tbody>
@@ -69,6 +71,21 @@ const MyFoods = () => {
                     {index + 1}
                   </Reveal>
                 </td>
+
+                <td>
+                  <Reveal
+                    keyframes={fadeInUp}
+                    delay={index * 100}
+                    duration={500}
+                  >
+                    <div className="avatar">
+                      <div className="mask mask-squircle h-12 w-12">
+                        <img src={item.foodImage} alt={item.foodName} />
+                      </div>
+                    </div>
+                  </Reveal>
+                </td>
+
                 <td>
                   <Reveal
                     keyframes={fadeInUp}
@@ -120,8 +137,11 @@ const MyFoods = () => {
                     delay={index * 60}
                     duration={500}
                   >
-                    <Link to={`/equipment/${item._id}`} className="underline">
-                      Details
+                    <Link
+                      to={`/my-foods/update/${item._id}`}
+                      className="btn btn-sm"
+                    >
+                      <MdOutlineEdit />
                     </Link>
                   </Reveal>
                 </td>
