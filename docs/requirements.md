@@ -81,19 +81,19 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
 Show details all information about a single food item including the following informations and additionally ✅
 
 - Purchase Count. Indicates the number of time the food was purchased, by default 0 ✅
-- Purchase button. Clicking this button will redirect users to the food purchase
+- Purchase button. Clicking this button will redirect users to the food purchase ✅
 
 # **Food Purchase Page (private)**
 
 This page will have a form containing the following information:
 
-- Food Name
-- Price
-- Quantity
-- Buyer Name (Read-only. This will be picked from the logged-in user's information)
-- Buyer Email (Read-only. This will be picked from the logged-in user's information)
-- Buying Date (This will not be an input field. The current time will be automatically added to the database. You can use Date.now() to achieve this)
-- **Purchase** button
+- Food Name  ✅
+- Price ✅
+- Quantity ✅
+- Buyer Name (Read-only. This will be picked from the logged-in user's information) ✅
+- Buyer Email (Read-only. This will be picked from the logged-in user's information) ✅
+- Buying Date (This will not be an input field. The current time will be automatically added to the database. You can use Date.now() to achieve this) ✅
+- **Purchase** button ✅
 
 📝Note: On clicking the purchase button the information will be stored in the database. Also, On a successful order, you have to show a toast/alert (do not use browser alert).
 

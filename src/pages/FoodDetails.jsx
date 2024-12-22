@@ -1,13 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { BiCategory } from "react-icons/bi";
-import { FaStar } from "react-icons/fa";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 
 const FoodDetails = () => {
   const { id } = useParams();
-  console.log(id);
 
   const { data: singleFood, isLoading } = useQuery({
     queryKey: ["singleFood"],
@@ -18,8 +16,6 @@ const FoodDetails = () => {
       return data;
     },
   });
-
-  console.log(singleFood);
 
   if (isLoading) {
     return <LoadingSpinner />;
@@ -83,8 +79,13 @@ const FoodDetails = () => {
             <li>Purchase count: {singleFood.purchase_count}</li>
             <li>Available Quantity: {singleFood.quantity}</li>
           </ul>
-          
-          <button className="btn btn-outline mt-3">Purchase</button>
+
+          <Link
+            to={`/food/purchase/${singleFood._id}`}
+            className="btn btn-outline mt-3"
+          >
+            Purchase
+          </Link>
         </div>
       </div>
     </div>
