@@ -40,16 +40,16 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
 
 #### **Authentication System**
 
-1. **Login Page:** When you click the login button on the navbar it redirects to the login page. You have to use a password and email-based authentication to log in. The login page will have-    
-   1. Email   
-   2. Password   
-   3. Google login/ GitHub-  implement any of one   
-   4. A link that will redirect to the Register page   
+1. **Login Page:** When you click the login button on the navbar it redirects to the login page. You have to use a password and email-based authentication to log in. The login page will have-    ✅
+   1. Email   ✅
+   2. Password   ✅
+   3. Google login/ GitHub-  implement any of one   ✅
+   4. A link that will redirect to the Register page   ✅
 2. **Register Page:** You have to use a password and email-based authentication to register. The Register page will have the following \-   
-   5. Name   
-   6. Email   
-   7. photoURL   
-   8. password    
+   5. Name   ✅
+   6. Email   ✅
+   7. photoURL   ✅
+   8. password    ✅
    9. A Link that will redirect to the login page   ✅
 * For password verification you need to follow this \-  Must have an Uppercase letter, a lowercase letter, Length must be at least 6 character    ✅
 * If any of this isn’t fulfilled it will show an error message /toast  ✅
@@ -68,13 +68,13 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
 
 * ### **Page Title**:  The background and the center of the section will have the page name. [Demo](https://i.ibb.co/dLgT64B/Screenshot-2024-05-06-143639.png)
 
-* ### **Food Cards:** Here you need to show all the food items stored in your database.
+* ### **Food Cards:** Here you need to show all the food items stored in your database. ✅
 
 * ### **Search Functionality**: See challenge part for more info 👇
 
 * ### **Each Card will have**: 
 
-* Food information from database  
+* Food information from database  ✅
 * Quantity (See challenge part for more info 👇)  
 * *Details Button*. On clicking this *button* will navigate to the Single Food Page.
 
@@ -94,7 +94,7 @@ This page will have a form containing the following information:
 * Buyer Name (Read-only. This will be picked from the logged-in user's information)  
 * Buyer Email (Read-only. This will be picked from the logged-in user's information)  
 * Buying Date (This will not be an input field. The current time will be automatically added to the database. You can use Date.now() to achieve this)  
-* **Purchase** button
+* **Purchase** button 
 
 📝Note: On clicking the purchase button the information will be stored in the database. Also, On a successful order, you have to show a toast/alert (do not use browser alert).
 
@@ -113,7 +113,7 @@ This page will have a form containing the following information:
 
 📝 clicking the update button/icon will redirect to the update page or open a modal. There will be a form that has the food info and an update button. When clicking the update button the product info will be updated. Don’t let other users update your added food items.
 
-**Add Food Page (Private)**
+**Add Food Page (Private)** 
 
 This page will have a form having the following fields: 
 

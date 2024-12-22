@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
@@ -8,15 +8,15 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <a>Home</a>
+        <NavLink to="/">Home</NavLink>
       </li>
 
       <li>
-        <a>All Foods</a>
+        <NavLink to="/foods">All Foods</NavLink>
       </li>
 
       <li>
-        <a>Gallery</a>
+        <NavLink to="/gallery">Gallery</NavLink>
       </li>
     </>
   );
@@ -65,7 +65,11 @@ const Navbar = () => {
                 className="btn btn-ghost btn-circle avatar"
               >
                 <div className="w-10 rounded-full" title={user?.displayName}>
-                  <img alt={user?.displayName} src={user?.photoURL} />
+                  <img
+                    alt={user?.displayName}
+                    src={user?.photoURL}
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
               </div>
               <ul
