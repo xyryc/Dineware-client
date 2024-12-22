@@ -6,7 +6,7 @@ import axios from "axios";
 
 const AddFood = () => {
   const queryClient = useQueryClient();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const { user } = useAuth();
 
   const { isLoading, mutateAsync } = useMutation({
@@ -16,6 +16,7 @@ const AddFood = () => {
     onSuccess: () => {
       toast.success("Food added to database");
       queryClient.invalidateQueries({ queryKey: ["foods"] });
+      navigate("/my-foods");
     },
     onError: () => {
       toast.error("Error occured while adding to db");
@@ -26,29 +27,28 @@ const AddFood = () => {
     e.preventDefault();
 
     const form = e.target;
-    const food_title = form.food_title.value;
-    const price = parseFloat(form.price.value);
+    const foodName = form.food_title.value;
+    const foodImage = form.image.value;
+    const foodCategory = form.food_category.value;
     const quantity = parseFloat(form.quantity.value);
-    const food_category = form.food_category.value;
-    const food_origin = form.food_origin.value;
-    const image = form.image.value;
+    const price = parseFloat(form.price.value);
+    const foodOrigin = form.food_origin.value;
     const description = form.description.value;
     const email = user?.email;
     const username = user?.displayName;
 
     const formData = {
-      food_title,
-      price,
+      foodName,
+      foodImage,
+      foodCategory,
       quantity,
-      food_category,
-      food_origin,
-      image,
+      price,
+      foodOrigin,
       description,
+      purchase_count: 0,
       email,
       username,
-      purchase_count: 0,
     };
-    console.log(formData);
 
     await mutateAsync(formData);
   };
