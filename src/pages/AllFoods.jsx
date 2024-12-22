@@ -47,7 +47,10 @@ const AllFoods = () => {
 
             {/* product details */}
             <div className="mt-3">
-              <h3 className="text-[1.1rem] font-semibold">{food.foodName}</h3>
+              <h3 className="text-[1.1rem] font-semibold">
+                {food.foodName}
+                <span className="text-sm ml-1">({food.quantity})</span>
+              </h3>
               <p>{food.description.split(" ").slice(0, 8).join(" ")}...</p>
 
               <div className="flex items-end justify-between mt-2">
@@ -61,9 +64,12 @@ const AllFoods = () => {
                   </p>
                 </div>
 
-                <button className="py-2 px-4 bg-[#0FABCA] text-white rounded-md flex items-center gap-[0.5rem] text-[0.9rem] hover:bg-[#0195af] transition-all duration-200">
+                <Link
+                  to={`/food/${food._id}`}
+                  className="py-2 px-4 bg-[#0FABCA] text-white rounded-md flex items-center gap-[0.5rem] text-[0.9rem] hover:bg-[#0195af] transition-all duration-200"
+                >
                   Details
-                </button>
+                </Link>
               </div>
             </div>
           </div>

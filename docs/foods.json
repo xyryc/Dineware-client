@@ -6,7 +6,8 @@
     "quantity": 10,
     "price": 8.99,
     "foodOrigin": "Italy",
-    "description": "A classic Italian pizza topped with fresh mozzarella, tomatoes, and basil. Ingredients include wheat flour, olive oil, yeast, and tomato sauce. Baked to perfection in a wood-fired oven."
+    "description": "A classic Italian pizza topped with fresh mozzarella, tomatoes, and basil. Ingredients include wheat flour, olive oil, yeast, and tomato sauce. Baked to perfection in a wood-fired oven.",
+    "purchase_count": 2
   },
   {
     "foodName": "Sushi Platter",
@@ -15,7 +16,8 @@
     "quantity": 15,
     "price": 12.49,
     "foodOrigin": "Japan",
-    "description": "An assortment of fresh sushi rolls and nigiri. Ingredients include sushi rice, nori, salmon, tuna, and avocado. Served with soy sauce, wasabi, and pickled ginger."
+    "description": "An assortment of fresh sushi rolls and nigiri. Ingredients include sushi rice, nori, salmon, tuna, and avocado. Served with soy sauce, wasabi, and pickled ginger.",
+    "purchase_count": 4
   },
   {
     "foodName": "Tacos al Pastor",
@@ -24,7 +26,8 @@
     "quantity": 20,
     "price": 9.99,
     "foodOrigin": "Mexico",
-    "description": "Corn tortillas filled with marinated pork, pineapple, and cilantro. Ingredients include pork shoulder, adobo spices, pineapple, and lime juice. Grilled and served hot."
+    "description": "Corn tortillas filled with marinated pork, pineapple, and cilantro. Ingredients include pork shoulder, adobo spices, pineapple, and lime juice. Grilled and served hot.",
+    "purchase_count": 7
   },
   {
     "foodName": "Butter Chicken",
@@ -33,7 +36,8 @@
     "quantity": 12,
     "price": 11.49,
     "foodOrigin": "India",
-    "description": "Tender chicken cooked in a creamy tomato-based sauce. Ingredients include chicken, butter, cream, and a blend of Indian spices. Served with naan or basmati rice."
+    "description": "Tender chicken cooked in a creamy tomato-based sauce. Ingredients include chicken, butter, cream, and a blend of Indian spices. Served with naan or basmati rice.",
+    "purchase_count": 0
   },
   {
     "foodName": "Pad Thai",
@@ -42,7 +46,8 @@
     "quantity": 18,
     "price": 10.99,
     "foodOrigin": "Thailand",
-    "description": "Stir-fried rice noodles with shrimp, tofu, eggs, and peanuts. Ingredients include tamarind paste, fish sauce, and palm sugar. Garnished with lime and fresh herbs."
+    "description": "Stir-fried rice noodles with shrimp, tofu, eggs, and peanuts. Ingredients include tamarind paste, fish sauce, and palm sugar. Garnished with lime and fresh herbs.",
+    "purchase_count": 5
   },
   {
     "foodName": "Beef Bourguignon",
@@ -51,7 +56,8 @@
     "quantity": 8,
     "price": 14.99,
     "foodOrigin": "France",
-    "description": "Slow-cooked beef stew with red wine, mushrooms, and onions. Ingredients include beef chuck, Burgundy wine, carrots, and thyme. Served with crusty bread."
+    "description": "Slow-cooked beef stew with red wine, mushrooms, and onions. Ingredients include beef chuck, Burgundy wine, carrots, and thyme. Served with crusty bread.",
+    "purchase_count": 2
   },
   {
     "foodName": "Peking Duck",
@@ -60,7 +66,8 @@
     "quantity": 6,
     "price": 22.99,
     "foodOrigin": "China",
-    "description": "Roasted duck served with thin pancakes, hoisin sauce, and scallions. Ingredients include duck, soy sauce, and five-spice powder. Prepared using traditional techniques."
+    "description": "Roasted duck served with thin pancakes, hoisin sauce, and scallions. Ingredients include duck, soy sauce, and five-spice powder. Prepared using traditional techniques.",
+    "purchase_count": 3
   },
   {
     "foodName": "Cheeseburger",
@@ -69,7 +76,8 @@
     "quantity": 25,
     "price": 7.99,
     "foodOrigin": "United States",
-    "description": "A juicy beef patty topped with cheddar cheese, lettuce, and tomato. Ingredients include ground beef, cheese, sesame bun, and condiments. Grilled to perfection."
+    "description": "A juicy beef patty topped with cheddar cheese, lettuce, and tomato. Ingredients include ground beef, cheese, sesame bun, and condiments. Grilled to perfection.",
+    "purchase_count": 19
   },
   {
     "foodName": "Paella Valenciana",
@@ -78,7 +86,8 @@
     "quantity": 10,
     "price": 15.49,
     "foodOrigin": "Spain",
-    "description": "A traditional rice dish with chicken, rabbit, and green beans. Ingredients include bomba rice, saffron, olive oil, and paprika. Cooked in a large shallow pan."
+    "description": "A traditional rice dish with chicken, rabbit, and green beans. Ingredients include bomba rice, saffron, olive oil, and paprika. Cooked in a large shallow pan.",
+    "purchase_count": 12
   },
   {
     "foodName": "Baklava",
@@ -87,6 +96,7 @@
     "quantity": 30,
     "price": 5.99,
     "foodOrigin": "Turkey",
-    "description": "A sweet pastry made with layers of phyllo dough, nuts, and honey. Ingredients include pistachios, walnuts, butter, and sugar syrup. Baked until golden and crisp."
+    "description": "A sweet pastry made with layers of phyllo dough, nuts, and honey. Ingredients include pistachios, walnuts, butter, and sugar syrup. Baked until golden and crisp.",
+    "purchase_count": 2
   }
 ]
