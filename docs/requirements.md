@@ -50,10 +50,10 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
    6. Email   
    7. photoURL   
    8. password    
-   9. A Link that will redirect to the login page   
-* For password verification you need to follow this \-  Must have an Uppercase letter, a lowercase letter, Length must be at least 6 character   
-* If any of this isn’t fulfilled it will show an error message /toast  
-* After successful login or Register you need to show toast/sweet alert
+   9. A Link that will redirect to the login page   ✅
+* For password verification you need to follow this \-  Must have an Uppercase letter, a lowercase letter, Length must be at least 6 character    ✅
+* If any of this isn’t fulfilled it will show an error message /toast  ✅
+* After successful login or Register you need to show toast/sweet alert ✅
 
 **Home page(public)**
 
