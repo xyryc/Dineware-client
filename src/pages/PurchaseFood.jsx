@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 const PurchaseFood = () => {
   const { id } = useParams();
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const { data: singleFood, isFetching } = useQuery({
     queryKey: ["singleFood"],
@@ -22,11 +23,12 @@ const PurchaseFood = () => {
 
   const { mutateAsync, isLoading } = useMutation({
     mutationFn: async (orderData) => {
-      await axios.post(`${import.meta.env.VITE_API_URL}/order`, orderData);
+      await axios.post(`${import.meta.env.VITE_API_URL}/orders`, orderData);
     },
 
     onSuccess: () => {
       toast.success("Order placed successfully!");
+      navigate("/my-orders");
     },
 
     onError: () => {

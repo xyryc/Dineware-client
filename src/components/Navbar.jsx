@@ -57,7 +57,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <ThemeToggle />
+        <div className="mr-2">
+          <ThemeToggle />
+        </div>
         {user ? (
           <>
             <div className="dropdown dropdown-end">
@@ -90,7 +92,7 @@ const Navbar = () => {
               </ul>
             </div>
 
-            <a className="btn" onClick={logOut}>
+            <a className="btn btn-ghost" onClick={logOut}>
               Logout
             </a>
           </>

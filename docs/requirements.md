@@ -7,11 +7,11 @@ We are seeking a skilled MERN Stack Developer to develop a full-stack Restaurant
 
 #### **Ensure the Following things to get 100% mark**
 
-- Include at least 15 meaningful commits on the client side & 8 meaningful commits on the server side with descriptive messages.
+- Include at least 15 meaningful commits on the client side & 8 meaningful commits on the server side with descriptive messages. ✅
 - Include a README file with the project name, purpose, live URL, key features, and any npm packages you have used.
 - Ensure the website is fully responsive on mobile, tablet, and desktop.
-- Secure Firebase configuration keys using environment variables.
-- Secure your MongoDB credentials using the environment variable.
+- Secure Firebase configuration keys using environment variables. ✅
+- Secure your MongoDB credentials using the environment variable. ✅
 - Create a design that encourages recruiters. Color contrast should please the eye & ensure that the website has proper alignment, space and The website does not express gobindo design
 
 ---
@@ -34,11 +34,11 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
 - **Home** ✅
 - **All Foods** ✅
 - **Gallery** ✅
-- **Conditional login/logout**
-- **Profile Image**. This will only show if the user is logged in, Otherwise show a login button. [Click Here for more details on this](#profile-image-functionalities)
+- **Conditional login/logout** ✅
+- **Profile Image**. This will only show if the user is logged in, Otherwise show a login button. [Click Here for more details on this](#profile-image-functionalities) ✅
 
 2. **Main Section**: Main Section will show different pages based on routes.
-3. **Footer**: A footer with all relevant information and eye-catchy design
+3. **Footer**: A footer with all relevant information and eye-catchy design ✅
 
 #### **Authentication System**
 
@@ -110,7 +110,8 @@ This page will have a form containing the following information:
 - Some Food info (example: food img, name, price, etc) ✅
 - an update button/icon. ✅
 
-📝 clicking the update button/icon will redirect to the update page or open a modal. There will be a form that has the food info and an update button. When clicking the update button the product info will be updated. Don’t let other users update your added food items. 
+📝 clicking the update button/icon will redirect to the update page or open a modal. There will be a form that has the food info and an update button. When clicking the update button the product info will be updated. ✅
+- Don’t let other users update your added food items. 
 
 # **Add Food Page (Private)** ✅
 
@@ -130,10 +131,10 @@ This page will have a form having the following fields:
 
 # **My Orders (Private)**
 
-In this route, show all food items ordered by the logged-in user. You have to filter the data based on the logged-in user email. You can show all the food items on the table/card. Each row/card will have:
+In this route, show all food items ordered by the logged-in user. You have to filter the data based on the logged-in user email. You can show all the food items on the table/card. Each row/card will have:  ✅
 
-1. Some Food info (example: food img, name, price, added time, food owner, etc)
-2. Buying date and time. In human readable format. Try to use [moment](https://momentjs.com/) for formatting date and time
+1. Some Food info (example: food img, name, price, added time, food owner, etc)  
+2. Buying date and time. In human readable format. Try to use [moment](https://momentjs.com/) for formatting date and time 
 3. a delete button/icon that will help the user delete the ordered item from the list
 
 # **Challenge Requirements**
@@ -141,8 +142,8 @@ In this route, show all food items ordered by the logged-in user. You have to fi
 1. **Food Quantity** \- You have to implement a feature on the food purchase page where the feature will be: if the available quantity of a food item is zero then you have to show a message to the buyer that he/she can not buy that item because that _item is not available_. Also, the purchase button will be disabled for the user. Also the buyers can’t buy more than the available quantity. (assume that a food item has 20 quantities then a user won’t be able to buy more than 20 quantities). Also don’t let the user purchase his/her own added food items.
 2. **Food Search Functionality**: In **All Foods** page implement a search functionality where foods can be searched using its name.
 3. **JWT Authentication**: Upon login, you will create a JWT token and store it on the client side. You will send the token with the call and verify the user. Implementing 401 and 403 is optional. Ensure you have implemented the JWT token, create a token, and store it on the client side for both email/password-based authentication and social login. You must implement JWT on your private routes.
-4. **Theme Customization**  
-   Add a Theme Toggling Button for changing themes from light to dark / dark to light. By changing the theme, it will make the full system dark / light based on user interaction.
+4. **Theme Customization**   ✅
+   Add a Theme Toggling Button for changing themes from light to dark / dark to light. By changing the theme, it will make the full system dark / light based on user interaction. ✅
 
 ####
 
@@ -150,9 +151,9 @@ In this route, show all food items ordered by the logged-in user. You have to fi
 
 On clicking the profile image on navbar show a dropdown menu with 3 links.
 
-1. My Foods
-2. Add food
-3. My Orders
+1. My Foods ✅
+2. Add food ✅
+3. My Orders ✅
 
 #### **What to Submit**
 
@@ -162,9 +163,9 @@ On clicking the profile image on navbar show a dropdown menu with 3 links.
 
 **Optional (But Highly Recommended)**
 
-1.  Add a spinner when the data is in a loading state. You can add a gif/jpg, use any package, or customize it using CSS.
-2.  Explore and implement any of the animations from the Framer Motion.
-3.  Explore and implement Tanstack query mutations in your api.
+1.  Add a spinner when the data is in a loading state. You can add a gif/jpg, use any package, or customize it using CSS. ✅
+2.  Explore and implement any of the animations from the Framer Motion. ✅
+3.  Explore and implement Tanstack query mutations in your api. ✅
 4.  Add multiple filtering systems on all food items pages. The filtering system should be implemented on the server side. Think about MongoDB $and, $or operators.
 5.  Pagination: on all Food pages \=\> At the bottom of the cards section you need to create a pagination. First, you have to load 9 cards of data from the database and then you will show the others based on the page number. Implement backend pagination.
 6.  Gallery section: On this page, you can implement infinite image scrolling. Initially, there will be 12 card images. After scrolling down the rest of the image will be shown. Also, add simple animation when the image loads.
