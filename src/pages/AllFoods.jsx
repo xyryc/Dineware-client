@@ -4,6 +4,8 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import { IoFastFoodSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Fade } from "react-awesome-reveal";
+import { motion } from "framer-motion";
 
 const AllFoods = () => {
   const [filter, setFilter] = useState("");
@@ -22,8 +24,6 @@ const AllFoods = () => {
     },
   });
 
-  console.log(foods);
-
   const handleReset = () => {
     setFilter("");
     setSearch("");
@@ -31,7 +31,7 @@ const AllFoods = () => {
   };
 
   return (
-    <div>
+    <div className="min-h-[90vh]">
       <div className="flex flex-col items-center justify-center my-2">
         <h1 className="font-bold">All Foods</h1>
         <div className="breadcrumbs text-sm">
@@ -54,7 +54,7 @@ const AllFoods = () => {
             onChange={(e) => setFilter(e.target.value)}
             value={filter}
           >
-            <option value="">Filter by Origin</option>
+            <option value="" disabled>Filter by Origin</option>
             <option value="Italy">Italy</option>
             <option value="Japan">Japan</option>
             <option value="Palestine">Palestine</option>
@@ -73,14 +73,13 @@ const AllFoods = () => {
             className="px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
             type="text"
             name="search"
-            placeholder="Enter Food Name"
-            aria-label="Enter Food Name"
+            placeholder="Search by Food Name"
+            aria-label="Search by Food Name"
             onChange={(e) => {
               setSearch(e.target.value);
             }}
             value={search}
           />
-
           <button className="px-1 md:px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none">
             Search
           </button>
@@ -96,7 +95,7 @@ const AllFoods = () => {
             }}
             value={sort}
           >
-            <option value="">Sort By Price</option>
+            <option value="" disabled>Sort By Price</option>
             <option value="dsc">Descending Order</option>
             <option value="asc">Ascending Order</option>
           </select>
@@ -109,51 +108,55 @@ const AllFoods = () => {
       {isLoading ? (
         <LoadingSpinner />
       ) : !foods?.length ? (
-        <p className="text-3xl font-bold text-center py-10">No foods found</p>
+        <p className="text-3xl font-bold text-center py-10">No foods found!</p>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 container mx-auto px-4">
-          {foods?.map((food) => (
-            <div
-              key={food._id}
-              className="border border-gray-300 rounded-md p-4"
-            >
-              {/* product image */}
-              <img
-                alt={food.foodName}
-                src={food.foodImage}
-                className="rounded-md h-[250px] w-full object-scale-down"
-              />
+        <Fade triggerOnce>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 container mx-auto px-4">
+            {foods?.map((food) => (
+              <motion.div
+                key={food._id}
+                className="border border-gray-300 rounded-md p-4"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {/* product image */}
+                <img
+                  alt={food.foodName}
+                  src={food.foodImage}
+                  className="rounded-md h-[250px] w-full object-cover"
+                />
 
-              {/* product details */}
-              <div className="mt-3">
-                <h3 className="text-[1.1rem] font-semibold">
-                  {food.foodName}
-                  <span className="text-sm ml-1">({food.quantity})</span>
-                </h3>
-                <p>{food.description.split(" ").slice(0, 8).join(" ")}...</p>
+                {/* product details */}
+                <div className="mt-3">
+                  <h3 className="text-[1.1rem] font-semibold">
+                    {food.foodName}
+                    <span className="text-sm ml-1">({food.quantity})</span>
+                  </h3>
+                  <p>{food.description.split(" ").slice(0, 8).join(" ")}...</p>
 
-                <div className="flex items-end justify-between mt-2">
-                  <div>
-                    <p className="text-[0.9rem] text-gray-500 flex items-center gap-1">
-                      <IoFastFoodSharp />
-                      {food.foodCategory}
-                    </p>
-                    <p className="text-[1rem] font-semibold mt-1 text-[#0FABCA]">
-                      $ {food.price}
-                    </p>
+                  <div className="flex items-end justify-between mt-2">
+                    <div>
+                      <p className="text-[0.9rem] text-gray-500 flex items-center gap-1">
+                        <IoFastFoodSharp />
+                        {food.foodCategory}
+                      </p>
+                      <p className="text-[1rem] font-semibold mt-1 text-[#0FABCA]">
+                        $ {food.price}
+                      </p>
+                    </div>
+
+                    <Link
+                      to={`/food/${food._id}`}
+                      className="py-2 px-4 bg-[#0FABCA] text-white rounded-md flex items-center gap-[0.5rem] text-[0.9rem] hover:bg-[#0195af] transition-all duration-200"
+                    >
+                      Details
+                    </Link>
                   </div>
-
-                  <Link
-                    to={`/food/${food._id}`}
-                    className="py-2 px-4 bg-[#0FABCA] text-white rounded-md flex items-center gap-[0.5rem] text-[0.9rem] hover:bg-[#0195af] transition-all duration-200"
-                  >
-                    Details
-                  </Link>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </div>
+        </Fade>
       )}
     </div>
   );

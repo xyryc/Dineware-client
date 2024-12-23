@@ -89,23 +89,35 @@ const AddFood = () => {
 
             <div className="flex flex-col gap-2">
               <label className="text-gray-700 ">Food Category</label>
-              <select name="food_category" className="border p-2 rounded-md">
-                <option value="Italian">Italian</option>
-                <option value="Japanese">Japanese</option>
-                <option value="Palestinian">Palestinian</option>
-                <option value="Mexican">Mexican</option>
-                <option value="Irish">Irish</option>
-                <option value="Bangladeshi">Bangladeshi</option>
-                <option value="Thai">Thai</option>
-                <option value="Russian">Russian</option>
-                <option value="Chinese">Chinese</option>
-                <option value="Spanish">Spanish</option>
+              <select
+                name="food_category"
+                className="border p-2 rounded-md"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select Category
+                </option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Appetizer">Appetizer</option>
+                <option value="Beverage">Beverage</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Snack">Snack</option>
+                <option value="Salad">Salad</option>
               </select>
             </div>
 
             <div className="flex flex-col gap-2">
               <label className="text-gray-700 ">Food Origin (Country)</label>
-              <select name="food_origin" className="border p-2 rounded-md">
+              <select
+                name="food_origin"
+                className="border p-2 rounded-md"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select Origin
+                </option>
                 <option value="Italy">Italy</option>
                 <option value="Japan">Japan</option>
                 <option value="Palestine">Palestine</option>

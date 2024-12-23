@@ -38,7 +38,7 @@ const MyOrders = () => {
     return <LoadingSpinner />;
   }
 
-  console.log(myOrders)
+  console.log(myOrders);
 
   return (
     <div className="space-y-6">
