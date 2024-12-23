@@ -135,13 +135,16 @@ In this route, show all food items ordered by the logged-in user. You have to fi
 
 1. Some Food info (example: food img, name, price, added time, food owner, etc)  
 2. Buying date and time. In human readable format. Try to use [moment](https://momentjs.com/) for formatting date and time 
-3. a delete button/icon that will help the user delete the ordered item from the list
+3. a delete button/icon that will help the user delete the ordered item from the list ✅
 
 # **Challenge Requirements**
 
-1. **Food Quantity** \- You have to implement a feature on the food purchase page where the feature will be: if the available quantity of a food item is zero then you have to show a message to the buyer that he/she can not buy that item because that _item is not available_. Also, the purchase button will be disabled for the user. Also the buyers can’t buy more than the available quantity. (assume that a food item has 20 quantities then a user won’t be able to buy more than 20 quantities). Also don’t let the user purchase his/her own added food items.
+1. **Food Quantity** \- You have to implement a feature on the food purchase page where the feature will be: if the available quantity of a food item is zero then you have to show a message to the buyer that he/she can not buy that item because that _item is not available_. Also, the purchase button will be disabled for the user. Also the buyers can’t buy more than the available quantity. (assume that a food item has 20 quantities then a user won’t be able to buy more than 20 quantities). Also don’t let the user purchase his/her own added food items. ✅
+
 2. **Food Search Functionality**: In **All Foods** page implement a search functionality where foods can be searched using its name.
+
 3. **JWT Authentication**: Upon login, you will create a JWT token and store it on the client side. You will send the token with the call and verify the user. Implementing 401 and 403 is optional. Ensure you have implemented the JWT token, create a token, and store it on the client side for both email/password-based authentication and social login. You must implement JWT on your private routes.
+
 4. **Theme Customization**   ✅
    Add a Theme Toggling Button for changing themes from light to dark / dark to light. By changing the theme, it will make the full system dark / light based on user interaction. ✅
 

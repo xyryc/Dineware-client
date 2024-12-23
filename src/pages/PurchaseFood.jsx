@@ -44,7 +44,11 @@ const PurchaseFood = () => {
     e.preventDefault();
 
     const form = e.target;
-    const purchase_quantity = form.purchase_quantity.value;
+    const purchase_quantity = parseInt(form.purchase_quantity.value);
+
+    if (purchase_quantity > singleFood.quantity) {
+      return toast.error("You can't buy more than the available quantity!");
+    }
 
     const purchaseData = {
       foodName: singleFood.foodName,
@@ -59,10 +63,23 @@ const PurchaseFood = () => {
     await mutateAsync(purchaseData);
   };
 
+  // validation
+  const isNotAvailable = singleFood?.quantity === 0;
+  const isOwnFood = singleFood?.email === user?.email;
+
   return (
     <div className="min-h-screen bg-gray-100 py-10">
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
-        <h1 className="text-2xl font-bold text-gray-800 mb-6">Purchase Food</h1>
+        <h1 className="text-2xl font-bold text-gray-800">Purchase Food</h1>
+
+        <div className="my-3 text-sm text-red-500">
+          <p className=" font-medium">
+            {isOwnFood && "You can't buy your own food"}
+          </p>
+          <p className="font-medium ">
+            {isNotAvailable && "The food item is not available for purchase"}
+          </p>
+        </div>
 
         <form
           onSubmit={handleSubmit}
@@ -138,9 +155,16 @@ const PurchaseFood = () => {
           <div className="col-span-1 md:col-span-2">
             <button
               type="submit"
-              className={`w-full bg-blue-500 text-white font-medium py-2 px-4 rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:text-sm`}
+              className={`w-full bg-blue-500 text-white font-medium py-2 px-4 
+                rounded-md shadow-sm hover:bg-blue-600 focus:outline-none 
+                focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:text-sm
+                ${
+                  (isOwnFood || isNotAvailable) &&
+                  "btn-disabled bg-gray-400 cursor-not-allowed"
+                }
+                `}
             >
-              {isLoading ? "Purchasing" : "Purchase"}
+              {isOwnFood || isNotAvailable ? "Unavailable" : "Purchase"}
             </button>
           </div>
         </form>

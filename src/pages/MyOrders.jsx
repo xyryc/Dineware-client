@@ -38,6 +38,8 @@ const MyOrders = () => {
     return <LoadingSpinner />;
   }
 
+  console.log(myOrders)
+
   return (
     <div className="space-y-6">
       {myOrders?.map((order) => (
