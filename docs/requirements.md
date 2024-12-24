@@ -61,7 +61,7 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
   - Which data you want to show is up to you. ✅
   - Details Button. On clicking this _button_ will navigate to the Single Food Page. ✅
   - See All Button: Below the 6 cards, there will be a see all button that will redirect the user to the All Foods page. ✅
-- **Extra section**: Add 2(Two) relevant and attractive sections except the nav, banner, footer, and Top Food section.
+- **Extra section**: Add 2(Two) relevant and attractive sections except the nav, banner, footer, and Top Food section. 
 
 **All foods page (public)** ✅
 
@@ -69,7 +69,7 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
 
 - ### **Food Cards:** Here you need to show all the food items stored in your database. ✅
 
-- ### **Search Functionality**: See challenge part for more info 👇
+- ### **Search Functionality**: See challenge part for more info 👇 ✅
 
 - ### **Each Card will have**:
 
@@ -99,9 +99,9 @@ This page will have a form containing the following information:
 
 **Gallery Page (public)**
 
-- ### **Page Title**: The background and center of the page should display the title prominently. [Demo](https://i.ibb.co/dLgT64B/Screenshot-2024-05-06-143639.png)
+- ### **Page Title**: The background and center of the page should display the title prominently. [Demo](https://i.ibb.co/dLgT64B/Screenshot-2024-05-06-143639.png) ✅
 
-- ### **Gallery Section**: Show at-least 10 static images added in a gallery section. When a user hover over the image, an overlay will be visible on the image with the user’s name and some short description of the image.💡For ideas visit this but don’t copy this design [🔗link](https://i.ibb.co/yXVybWJ/gallery-card-demo.jpg). And when the image is clicked the image will be shown in a bigger format similar to a **lightbox.** Use [yet-another-react-lightbox](https://yet-another-react-lightbox.com/) or any other library of your choice to make this
+- ### **Gallery Section**: Show at-least 10 static images added in a gallery section. When a user hover over the image, an overlay will be visible on the image with the user’s name and some short description of the image.💡For ideas visit this but don’t copy this design [🔗link](https://i.ibb.co/yXVybWJ/gallery-card-demo.jpg). And when the image is clicked the image will be shown in a bigger format similar to a **lightbox.** Use [yet-another-react-lightbox](https://yet-another-react-lightbox.com/) or any other library of your choice to make this ✅
 
 # **My Foods Page (Private)** ✅
 

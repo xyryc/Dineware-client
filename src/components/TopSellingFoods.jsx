@@ -18,7 +18,7 @@ const TopSellingFoods = () => {
   });
 
   return (
-    <div>
+    <div id="topSelling">
       <h1 className="text-center font-bold text-3xl my-6">Top Selling Foods</h1>
 
       {isLoading ? (

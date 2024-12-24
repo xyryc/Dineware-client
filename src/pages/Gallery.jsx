@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -86,7 +87,19 @@ const Gallery = () => {
 
   return (
     <div className="min-h-[90vh] flex flex-col items-center px-4">
-      <h1 className="text-3xl font-bold mb-6">Gallery</h1>
+      <div className="flex flex-col items-center justify-center my-2">
+        <h1 className="font-bold">Gallery</h1>
+        <div className="breadcrumbs text-sm">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <a>Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       {/* Hover Cards */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full lg:w-[70%]">
