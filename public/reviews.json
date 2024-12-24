@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Aiko Tanaka",
+    "image": "https://randomuser.me/api/portraits/women/11.jpg",
+    "profession": "Food Blogger",
+    "review": "The sushi was so fresh and delicate. The presentation was a true piece of art!"
+  },
+  {
+    "id": 2,
+    "name": "Dmitry Ivanov",
+    "image": "https://randomuser.me/api/portraits/men/51.jpg",
+    "profession": "Chef",
+    "review": "The borscht had the perfect balance of tanginess and flavor. Truly authentic Russian cuisine."
+  },
+  {
+    "id": 3,
+    "name": "Nabila Rahman",
+    "image": "https://randomuser.me/api/portraits/women/46.jpg",
+    "profession": "Food Critic",
+    "review": "The kacchi biryani was absolutely delightful. The spices were perfectly blended and the meat was tender."
+  },
+  {
+    "id": 4,
+    "name": "Chen Wei",
+    "image": "https://randomuser.me/api/portraits/men/42.jpg",
+    "profession": "Photographer",
+    "review": "The dim sum was bursting with flavors and served with the best dipping sauces."
+  },
+  {
+    "id": 5,
+    "name": "Aleksei Petrov",
+    "image": "https://randomuser.me/api/portraits/men/20.jpg",
+    "profession": "Entrepreneur",
+    "review": "The beef stroganoff was creamy and flavorful, just like my grandmother used to make."
+  },
+  {
+    "id": 6,
+    "name": "Mehnaz Akter",
+    "image": "https://randomuser.me/api/portraits/women/31.jpg",
+    "profession": "Travel Enthusiast",
+    "review": "The hilsha curry had a rich, traditional flavor. A perfect Bangladeshi dish!"
+  },
+  {
+    "id": 7,
+    "name": "Haruto Yamamoto",
+    "image": "https://randomuser.me/api/portraits/men/40.jpg",
+    "profession": "Fitness Trainer",
+    "review": "The ramen was hearty and comforting with a broth that was rich and savory."
+  },
+  {
+    "id": 8,
+    "name": "Zarina Karimova",
+    "image": "https://randomuser.me/api/portraits/women/26.jpg",
+    "profession": "Artist",
+    "review": "The pelmeni dumplings were tender and filled with juicy meat. Absolutely delightful!"
+  },
+  {
+    "id": 9,
+    "name": "Raihan Chowdhury",
+    "image": "https://randomuser.me/api/portraits/men/14.jpg",
+    "profession": "Writer",
+    "review": "The panta bhat with fried hilsha was nostalgic and bursting with authentic Bangladeshi flavors."
+  },
+  {
+    "id": 10,
+    "name": "Yuki Nakamura",
+    "image": "https://randomuser.me/api/portraits/women/39.jpg",
+    "profession": "Food Critic",
+    "review": "The tempura was light, crispy, and perfectly cooked. A delightful experience!"
+  }
+]

@@ -1,11 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import LoadingSpinner from "../components/LoadingSpinner";
-import { IoFastFoodSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
-import { motion } from "framer-motion";
+import FoodCard from "../components/FoodCard";
 
 const AllFoods = () => {
   const [filter, setFilter] = useState("");
@@ -31,7 +30,7 @@ const AllFoods = () => {
   };
 
   return (
-    <div className="min-h-[90vh]">
+    <div className="min-h-[90vh] container mx-auto px-4">
       <div className="flex flex-col items-center justify-center my-2">
         <h1 className="font-bold">All Foods</h1>
         <div className="breadcrumbs text-sm">
@@ -50,7 +49,7 @@ const AllFoods = () => {
       <div className="flex flex-col md:flex-row justify-center items-center gap-5 my-6">
         <div>
           <select
-            className="border p-4 rounded-lg"
+            className="p-4 rounded-lg outline-1 outline"
             onChange={(e) => setFilter(e.target.value)}
             value={filter}
           >
@@ -70,7 +69,7 @@ const AllFoods = () => {
           </select>
         </div>
 
-        <div className="flex p-1 overflow-hidden border rounded-lg focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+        <div className="flex p-1 overflow-hidden rounded-lg outline-1 outline">
           <input
             className="px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none focus:placeholder-transparent"
             type="text"
@@ -82,16 +81,14 @@ const AllFoods = () => {
             }}
             value={search}
           />
-          <button className="px-1 md:px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none">
-            Search
-          </button>
+          <button className="btn btn-neutral rounded-md">Search</button>
         </div>
 
         <div>
           <select
             name="category"
             id="category"
-            className="border p-4 rounded-md"
+            className="p-4 rounded-md outline-1 outline"
             onChange={(e) => {
               setSort(e.target.value);
             }}
@@ -104,7 +101,7 @@ const AllFoods = () => {
             <option value="asc">Ascending Order</option>
           </select>
         </div>
-        <button onClick={handleReset} className="btn">
+        <button onClick={handleReset} className="btn btn-neutral rounded-md">
           Reset
         </button>
       </div>
@@ -115,49 +112,9 @@ const AllFoods = () => {
         <p className="text-3xl font-bold text-center py-10">No foods found!</p>
       ) : (
         <Fade triggerOnce>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 container mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {foods?.map((food) => (
-              <motion.div
-                key={food._id}
-                className="border border-gray-300 rounded-md p-4"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {/* product image */}
-                <img
-                  alt={food.foodName}
-                  src={food.foodImage}
-                  className="rounded-md h-[250px] w-full object-cover"
-                />
-
-                {/* product details */}
-                <div className="mt-3">
-                  <h3 className="text-[1.1rem] font-semibold">
-                    {food.foodName}
-                    <span className="text-sm ml-1">({food.quantity})</span>
-                  </h3>
-                  <p>{food.description.split(" ").slice(0, 8).join(" ")}...</p>
-
-                  <div className="flex items-end justify-between mt-2">
-                    <div>
-                      <p className="text-[0.9rem] text-gray-500 flex items-center gap-1">
-                        <IoFastFoodSharp />
-                        {food.foodCategory}
-                      </p>
-                      <p className="text-[1rem] font-semibold mt-1 text-[#0FABCA]">
-                        $ {food.price}
-                      </p>
-                    </div>
-
-                    <Link
-                      to={`/food/${food._id}`}
-                      className="py-2 px-4 bg-[#0FABCA] text-white rounded-md flex items-center gap-[0.5rem] text-[0.9rem] hover:bg-[#0195af] transition-all duration-200"
-                    >
-                      Details
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
+              <FoodCard key={food._id} food={food} />
             ))}
           </div>
         </Fade>
