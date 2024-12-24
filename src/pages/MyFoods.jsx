@@ -15,7 +15,8 @@ const MyFoods = () => {
     queryKey: ["myFoods"],
     queryFn: async () => {
       const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}/foods/${user?.email}`
+        `${import.meta.env.VITE_API_URL}/foods/${user.email}`,
+        { withCredentials: true }
       );
       return data;
     },
@@ -59,7 +60,7 @@ const MyFoods = () => {
           </thead>
           <tbody>
             {/* Table rows with reveal */}
-            {myFoods.map((item, index) => (
+            {myFoods?.map((item, index) => (
               <tr key={item._id}>
                 <td></td>
                 <td>

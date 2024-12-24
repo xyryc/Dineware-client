@@ -49,14 +49,28 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
 
       if (currentUser?.email) {
-        const user = { email: currentUser };
+        const user = { email: currentUser.email };
 
         axios
           .post("http://localhost:5000/jwt", user, { withCredentials: true })
-          .then((res) => console.log(res.data));
+          .then((res) => {
+            console.log("login", res.data);
+            setLoading(false);
+          });
+      } else {
+        axios
+          .post(
+            "http://localhost:5000/logout",
+            {},
+            {
+              withCredentials: true,
+            }
+          )
+          .then((res) => {
+            console.log("logout", res.data);
+            setLoading(false);
+          });
       }
-
-      setLoading(false);
     });
 
     return () => {

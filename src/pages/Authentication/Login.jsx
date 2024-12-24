@@ -27,13 +27,13 @@ const Login = () => {
     userLogin(email, password)
       .then((result) => {
         setUser(result.user);
-        console.log(result.user);
+        // console.log(result.user);
 
         toast.success(`Logged in as ${result.user?.email}`);
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
         toast.error(err.code);
         setLoading(false);
       });
@@ -42,13 +42,13 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         setUser(result.user);
         toast.success(`Logged in as ${result.user?.email}`);
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         toast.error(error.code);
         setLoading(false);
       });

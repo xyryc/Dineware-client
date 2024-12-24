@@ -144,7 +144,9 @@ In this route, show all food items ordered by the logged-in user. You have to fi
 
 2. **Food Search Functionality**: In **All Foods** page implement a search functionality where foods can be searched using its name. ✅
 
-3. **JWT Authentication**: Upon login, you will create a JWT token and store it on the client side. You will send the token with the call and verify the user. Implementing 401 and 403 is optional. Ensure you have implemented the JWT token, create a token, and store it on the client side for both email/password-based authentication and social login. You must implement JWT on your private routes. 
+3. **JWT Authentication**: Upon login, you will create a JWT token and store it on the client side. ✅
+ You will send the token with the call and verify the user. Implementing 401 and 403 is optional. Ensure you have implemented the JWT token, create a token, and store it on the client side for both email/password-based authentication and social login. 
+ You must implement JWT on your private routes. 
 
 4. **Theme Customization** ✅
    Add a Theme Toggling Button for changing themes from light to dark / dark to light. By changing the theme, it will make the full system dark / light based on user interaction. ✅
