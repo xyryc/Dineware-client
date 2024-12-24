@@ -17,8 +17,6 @@ const TopSellingFoods = () => {
     },
   });
 
-  console.log(topFoods);
-
   return (
     <div>
       <h1 className="text-center font-bold text-3xl my-6">Top Selling Foods</h1>
@@ -74,6 +72,12 @@ const TopSellingFoods = () => {
           </div>
         </Fade>
       )}
+
+      <p className="text-center my-10">
+        <Link to="/foods" className="btn btn-neutral">
+          See All
+        </Link>
+      </p>
     </div>
   );
 };

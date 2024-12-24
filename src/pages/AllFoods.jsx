@@ -54,7 +54,9 @@ const AllFoods = () => {
             onChange={(e) => setFilter(e.target.value)}
             value={filter}
           >
-            <option value="" disabled>Filter by Origin</option>
+            <option value="" disabled>
+              Filter by Origin
+            </option>
             <option value="Italy">Italy</option>
             <option value="Japan">Japan</option>
             <option value="Palestine">Palestine</option>
@@ -95,7 +97,9 @@ const AllFoods = () => {
             }}
             value={sort}
           >
-            <option value="" disabled>Sort By Price</option>
+            <option value="" disabled>
+              Sort By Price
+            </option>
             <option value="dsc">Descending Order</option>
             <option value="asc">Ascending Order</option>
           </select>
