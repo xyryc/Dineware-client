@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
@@ -7,17 +6,16 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import { MdOutlineEdit } from "react-icons/md";
+import useAxiosSecure from "../hooks/useAxiosSecure";
 
 const MyFoods = () => {
   const { user } = useContext(AuthContext);
+  const axiosSecure = useAxiosSecure();
 
   const { data: myFoods, isLoading } = useQuery({
     queryKey: ["myFoods"],
     queryFn: async () => {
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}/foods/${user.email}`,
-        { withCredentials: true }
-      );
+      const { data } = await axiosSecure(`/foods/${user.email}`);
       return data;
     },
   });
