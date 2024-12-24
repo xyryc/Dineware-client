@@ -2,17 +2,19 @@ import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import useAuth from "../hooks/useAuth";
-import axios from "axios";
+import useAxiosSecure from "../hooks/useAxiosSecure";
 
 const AddFood = () => {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   const { user } = useAuth();
+  const axiosSecure = useAxiosSecure();
 
   const { isLoading, mutateAsync } = useMutation({
     mutationFn: async (foodData) => {
-      await axios.post(`${import.meta.env.VITE_API_URL}/add-food`, foodData);
+      await axiosSecure.post(`/add-food`, foodData);
     },
+
     onSuccess: () => {
       toast.success("Food added to database");
       queryClient.invalidateQueries({ queryKey: ["foods"] });

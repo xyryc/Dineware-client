@@ -5,11 +5,13 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import useAxiosSecure from "../hooks/useAxiosSecure";
 
 const PurchaseFood = () => {
   const { id } = useParams();
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
+  const axiosSecure = useAxiosSecure();
 
   const { data: singleFood, isFetching } = useQuery({
     queryKey: ["singleFood"],
@@ -23,7 +25,7 @@ const PurchaseFood = () => {
 
   const { mutateAsync, isLoading } = useMutation({
     mutationFn: async (orderData) => {
-      await axios.post(`${import.meta.env.VITE_API_URL}/orders`, orderData);
+      await axiosSecure.post(`/orders`, orderData);
     },
 
     onSuccess: () => {

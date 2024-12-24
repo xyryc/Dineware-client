@@ -92,7 +92,7 @@ const Navbar = () => {
               </ul>
             </div>
 
-            <a className="btn btn-ghost" onClick={logOut}>
+            <a className="btn btn-outline btn-sm" onClick={logOut}>
               Logout
             </a>
           </>

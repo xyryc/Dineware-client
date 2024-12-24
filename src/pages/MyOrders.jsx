@@ -1,21 +1,20 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import LoadingSpinner from "../components/LoadingSpinner";
 import toast from "react-hot-toast";
+import useAxiosSecure from "../hooks/useAxiosSecure";
 
 const MyOrders = () => {
   const queryClient = useQueryClient(); // Use the existing QueryClient
   const { user } = useContext(AuthContext);
+  const axiosSecure = useAxiosSecure();
 
   // Fetch orders
   const { data: myOrders, isFetching } = useQuery({
     queryKey: ["myOrders"],
     queryFn: async () => {
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}/orders/${user?.email}`
-      );
+      const { data } = await axiosSecure(`/orders/${user?.email}`);
       return data;
     },
   });
@@ -23,7 +22,7 @@ const MyOrders = () => {
   // Mutation for deleting an order
   const { mutate, isLoading } = useMutation({
     mutationFn: async (id) => {
-      await axios.delete(`${import.meta.env.VITE_API_URL}/orders/delete/${id}`);
+      await axiosSecure.delete(`/orders/delete/${id}`);
     },
     onSuccess: () => {
       toast.success("Order deleted successfully!");
@@ -37,8 +36,6 @@ const MyOrders = () => {
   if (isLoading || isFetching) {
     return <LoadingSpinner />;
   }
-
-  console.log(myOrders);
 
   return (
     <div className="space-y-6">

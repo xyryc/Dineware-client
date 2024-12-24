@@ -5,9 +5,11 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import { AuthContext } from "../provider/AuthProvider";
 import { useContext } from "react";
 import toast from "react-hot-toast";
+import useAxiosSecure from "../hooks/useAxiosSecure";
 
 const UpdateFood = () => {
   const queryClient = useQueryClient();
+  const axiosSecure = useAxiosSecure();
 
   const { user } = useContext(AuthContext);
   const { id } = useParams();
@@ -25,10 +27,7 @@ const UpdateFood = () => {
 
   const { mutateAsync } = useMutation({
     mutationFn: async (foodData) => {
-      await axios.put(
-        `${import.meta.env.VITE_API_URL}/food/update/${id}`,
-        foodData
-      );
+      await axiosSecure.put(`/food/update/${id}`, foodData);
     },
 
     onSuccess: () => {

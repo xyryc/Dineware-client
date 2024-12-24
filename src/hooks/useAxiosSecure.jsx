@@ -21,8 +21,6 @@ const useAxiosSecure = () => {
         console.log("error caught in interceptor", error);
 
         if (error.status === 401 || error.status === 403) {
-          console.log("need to logout  user");
-
           logOut()
             .then(() => {
               console.log("logout user");
@@ -36,7 +34,7 @@ const useAxiosSecure = () => {
         return Promise.reject(error);
       }
     );
-  }, []);
+  }, [logOut, navigate]);
 
   return axiosInstance;
 };
