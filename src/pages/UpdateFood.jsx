@@ -10,7 +10,6 @@ import useAxiosSecure from "../hooks/useAxiosSecure";
 const UpdateFood = () => {
   const queryClient = useQueryClient();
   const axiosSecure = useAxiosSecure();
-
   const { user } = useContext(AuthContext);
   const { id } = useParams();
   const navigate = useNavigate();
@@ -99,6 +98,7 @@ const UpdateFood = () => {
                 defaultValue={myFood.price}
                 name="price"
                 type="number"
+                step="0.01"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
               />
             </div>
@@ -120,16 +120,17 @@ const UpdateFood = () => {
                 className="border p-2 rounded-md"
                 defaultValue={myFood.foodCategory}
               >
-                <option value="Italian">Italian</option>
-                <option value="Japanese">Japanese</option>
-                <option value="Palestinian">Palestinian</option>
-                <option value="Mexican">Mexican</option>
-                <option value="Irish">Irish</option>
-                <option value="Bangladeshi">Bangladeshi</option>
-                <option value="Thai">Thai</option>
-                <option value="Russian">Russian</option>
-                <option value="Chinese">Chinese</option>
-                <option value="Spanish">Spanish</option>
+                <option value="" disabled>
+                  Select Category
+                </option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Appetizer">Appetizer</option>
+                <option value="Beverage">Beverage</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Snack">Snack</option>
+                <option value="Salad">Salad</option>
               </select>
             </div>
 
@@ -140,6 +141,9 @@ const UpdateFood = () => {
                 className="border p-2 rounded-md"
                 defaultValue={myFood.foodOrigin}
               >
+                <option value="" disabled>
+                  Select Origin
+                </option>
                 <option value="Italy">Italy</option>
                 <option value="Japan">Japan</option>
                 <option value="Palestine">Palestine</option>

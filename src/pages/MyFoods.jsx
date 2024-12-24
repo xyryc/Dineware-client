@@ -39,8 +39,22 @@ const MyFoods = () => {
     `;
 
   return (
-    <div>
-      <div className="overflow-x-auto lg:overflow-hidden">
+    <div className="min-h-screen">
+      <div className="flex flex-col items-center justify-center my-2">
+        <h1 className="font-bold">My Foods</h1>
+        <div className="breadcrumbs text-sm">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <a>My Foods</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="overflow-x-auto lg:overflow-hidden my-6">
         <table className="table">
           {/* Table head */}
           <thead className="bg-gray-800 text-white">

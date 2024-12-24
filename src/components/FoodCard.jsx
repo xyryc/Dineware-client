@@ -24,7 +24,7 @@ const FoodCard = ({food}) => {
             {food.foodName}
             <span className="text-xs flex items-center gap-1 badge rounded-full">
               <IoFastFoodSharp />
-              {food.foodCategory}
+              {food.foodOrigin}
             </span>
           </h3>
           <p className="my-[10px]">{food.description.split(" ").slice(0, 10).join(" ")}...</p>

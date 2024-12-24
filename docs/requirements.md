@@ -61,7 +61,7 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
   - Which data you want to show is up to you. ✅
   - Details Button. On clicking this _button_ will navigate to the Single Food Page. ✅
   - See All Button: Below the 6 cards, there will be a see all button that will redirect the user to the All Foods page. ✅
-- **Extra section**: Add 2(Two) relevant and attractive sections except the nav, banner, footer, and Top Food section. 
+- **Extra section**: Add 2(Two) relevant and attractive sections except the nav, banner, footer, and Top Food section. ✅
 
 **All foods page (public)** ✅
 
