@@ -193,6 +193,6 @@ Some Guidelines:
 - fix details page UI ✅
 - jwt token
 - add readme ✅
-- add 404 page
 - fix buttons
-- build and deploy correctly
+- add 404 page 
+- build and deploy correctly 
