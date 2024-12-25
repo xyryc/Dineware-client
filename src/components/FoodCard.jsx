@@ -5,12 +5,7 @@ import { IoFastFoodSharp } from "react-icons/io5";
 
 const FoodCard = ({ food }) => {
   return (
-    <motion.div
-      key={food._id}
-      className="rounded-md p-4  bg-white/10"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
+    <motion.div key={food._id} className="rounded-md p-4 bg-white/10">
       {/* product image */}
       <img
         alt={food.foodName}
@@ -20,7 +15,7 @@ const FoodCard = ({ food }) => {
 
       {/* product details */}
       <div className="mt-3">
-        <h3 className="text-2xl font-bold flex items-center gap-3">
+        <h3 className="text-2xl font-semibold flex items-center gap-3">
           {food.foodName}
           <span className="text-xs flex items-center gap-1 badge rounded-full font-dancing-script">
             <IoFastFoodSharp />
@@ -42,7 +37,7 @@ const FoodCard = ({ food }) => {
 
           <Link
             to={`/food/${food._id}`}
-            className="py-2 px-4 bg-[#0FABCA] text-white rounded-md flex items-center gap-[0.5rem] text-[0.9rem] hover:bg-[#0195af] transition-all duration-200"
+            className="btn btn-sm rounded-full bg-neutral text-white transition-all duration-200"
           >
             Details
           </Link>

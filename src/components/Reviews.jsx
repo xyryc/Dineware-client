@@ -48,7 +48,7 @@ const Reviews = () => {
 
               <div className="divider"></div>
 
-              <p className="text-lg font-medium text-pretty">
+              <p className="text-lg font-light text-pretty font-inter">
                 &quot;{review.review} &quot;
               </p>
             </div>

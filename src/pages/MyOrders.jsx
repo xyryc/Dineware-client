@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import moment from "moment";
+import { RiDeleteBin6Line } from "react-icons/ri";
+
 
 const MyOrders = () => {
   const queryClient = useQueryClient(); // Use the existing QueryClient
@@ -78,10 +80,12 @@ const MyOrders = () => {
             <tr>
               <th></th>
               <th>Index</th>
+              <th>Image</th>
               <th>Name</th>
               <th>Quantity</th>
               <th>Price</th>
               <th>Time</th>
+              <th>Food Owner</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -90,6 +94,7 @@ const MyOrders = () => {
             {myOrders?.map((item, index) => (
               <tr key={item._id}>
                 <td></td>
+
                 <td>
                   <Reveal
                     keyframes={fadeInUp}
@@ -97,6 +102,20 @@ const MyOrders = () => {
                     duration={500}
                   >
                     {index + 1}
+                  </Reveal>
+                </td>
+
+                <td>
+                  <Reveal
+                    keyframes={fadeInUp}
+                    delay={index * 100}
+                    duration={500}
+                  >
+                    <div className="avatar">
+                      <div className="mask mask-squircle h-12 w-12">
+                        <img src={item.foodImage} alt={item.foodName} />
+                      </div>
+                    </div>
                   </Reveal>
                 </td>
 
@@ -143,11 +162,21 @@ const MyOrders = () => {
                     delay={index * 100}
                     duration={500}
                   >
+                    {item.buyerName}
+                  </Reveal>
+                </td>
+
+                <td>
+                  <Reveal
+                    keyframes={fadeInUp}
+                    delay={index * 100}
+                    duration={500}
+                  >
                     <button
-                      className="btn btn-xs btn-outline"
+                      className="text-lg"
                       onClick={() => mutate(item._id)}
                     >
-                      x
+                      <RiDeleteBin6Line/>
                     </button>
                   </Reveal>
                 </td>

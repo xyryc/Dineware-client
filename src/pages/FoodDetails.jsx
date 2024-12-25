@@ -119,8 +119,7 @@ const FoodDetails = () => {
                 {/* Action Button */}
                 <Link
                   to={`/food/purchase/${singleFood._id}`}
-                  className="btn btn-primary btn-lg mt-4 w-full md:w-auto"
-                  whileHover={{ scale: 1.05 }}
+                  className="btn btn-outline mt-4 w-full md:w-auto"
                 >
                   Purchase Now
                 </Link>

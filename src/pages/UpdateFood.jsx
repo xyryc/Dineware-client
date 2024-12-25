@@ -91,14 +91,14 @@ const UpdateFood = () => {
 
       <div className="flex justify-center items-center min-h-[calc(100vh-306px)]">
         <section className="p-2 md:p-6 mx-auto bg-base-100 rounded-md shadow-md w-full max-w-4xl">
-          <h2 className="text-lg font-semibold text-primary-content">
+          <h2 className="text-lg font-semibold ">
             Update food data: {myFood.foodName}
           </h2>
 
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
               <div className="sm:col-span-2">
-                <label className="text-primary-content">Food Name</label>
+                <label className="">Food Name</label>
                 <input
                   defaultValue={myFood.foodName}
                   name="food_title"
@@ -108,7 +108,7 @@ const UpdateFood = () => {
               </div>
 
               <div>
-                <label className="text-primary-content">Price</label>
+                <label className="">Price</label>
                 <input
                   defaultValue={myFood.price}
                   name="price"
@@ -119,9 +119,7 @@ const UpdateFood = () => {
               </div>
 
               <div>
-                <label className="text-primary-content">
-                  Available Quantity
-                </label>
+                <label className="">Available Quantity</label>
                 <input
                   defaultValue={myFood.quantity}
                   name="quantity"
@@ -131,7 +129,7 @@ const UpdateFood = () => {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-primary-content">Food Category</label>
+                <label className="">Food Category</label>
                 <select
                   name="food_category"
                   className="select select-bordered w-full mt-2"
@@ -152,9 +150,7 @@ const UpdateFood = () => {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-primary-content">
-                  Food Origin (Country)
-                </label>
+                <label className="">Food Origin (Country)</label>
                 <select
                   name="food_origin"
                   className="select select-bordered w-full mt-2"
@@ -178,7 +174,7 @@ const UpdateFood = () => {
             </div>
 
             <div className="mt-4">
-              <label className="text-primary-content">Image URL</label>
+              <label className="">Image URL</label>
               <input
                 defaultValue={myFood.foodImage}
                 type="text"
@@ -188,7 +184,7 @@ const UpdateFood = () => {
             </div>
 
             <div className="flex flex-col gap-2 mt-4">
-              <label className="text-primary-content" htmlFor="description">
+              <label className="" htmlFor="description">
                 Description
               </label>
               <textarea
@@ -201,9 +197,7 @@ const UpdateFood = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
               <div>
-                <label className="text-primary-content" htmlFor="emailAddress">
-                  Email Address
-                </label>
+                <label htmlFor="emailAddress">Email Address</label>
                 <input
                   id="emailAddress"
                   type="email"
@@ -215,7 +209,7 @@ const UpdateFood = () => {
               </div>
 
               <div>
-                <label className="text-primary-content">Username</label>
+                <label>Username</label>
                 <input
                   type="text"
                   name="name"
@@ -229,7 +223,9 @@ const UpdateFood = () => {
             <div className="flex justify-end mt-6">
               <button
                 type="submit"
-                className={`btn btn-primary ${isLoading && "loading"}`}
+                className={`btn bg-neutral text-white btn-outline ${
+                  isLoading && "loading"
+                }`}
               >
                 {isLoading ? "Updating..." : "Update Food Data"}
               </button>

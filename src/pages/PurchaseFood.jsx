@@ -50,6 +50,7 @@ const PurchaseFood = () => {
     }
 
     const purchaseData = {
+      foodImage: singleFood.foodImage,
       foodName: singleFood.foodName,
       order_price: singleFood.price * quantity,
       purchase_quantity: quantity,

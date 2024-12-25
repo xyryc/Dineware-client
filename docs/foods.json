@@ -1,102 +1,122 @@
 [
   {
     "foodName": "Margherita Pizza",
-    "foodImage": "https://demo-themewinter.com/gloreya/restaurant/wp-content/uploads/sites/2/2021/01/gallery_image6.jpg",
-    "foodCategory": "Italian",
+    "foodImage": "https://i.ibb.co.com/hZpvy8Q/pizza-3000273-640.jpg",
+    "foodCategory": "Dinner",
     "quantity": 10,
     "price": 8.99,
     "foodOrigin": "Italy",
     "description": "A classic Italian pizza topped with fresh mozzarella, tomatoes, and basil. Ingredients include wheat flour, olive oil, yeast, and tomato sauce. Baked to perfection in a wood-fired oven.",
-    "purchase_count": 2
+    "purchase_count": 20,
+    "email": "baust.cse.200101076@gmail.com",
+    "username": "076_Talath Un Nabi (Anik)"
   },
   {
     "foodName": "Sushi Platter",
-    "foodImage": "https://demo-themewinter.com/gloreya/restaurant/wp-content/uploads/sites/2/2021/01/gallery_image6.jpg",
-    "foodCategory": "Japanese",
+    "foodImage": "https://i.ibb.co.com/dr3v1fS/Sushi-Platter.jpg",
+    "foodCategory": "Appetizer",
     "quantity": 15,
     "price": 12.49,
     "foodOrigin": "Japan",
     "description": "An assortment of fresh sushi rolls and nigiri. Ingredients include sushi rice, nori, salmon, tuna, and avocado. Served with soy sauce, wasabi, and pickled ginger.",
-    "purchase_count": 4
+    "purchase_count": 4,
+    "email": "baust.cse.200101076@gmail.com",
+    "username": "076_Talath Un Nabi (Anik)"
   },
   {
     "foodName": "Tacos al Pastor",
-    "foodImage": "https://demo-themewinter.com/gloreya/restaurant/wp-content/uploads/sites/2/2021/01/gallery_image6.jpg",
-    "foodCategory": "Mexican",
+    "foodImage": "https://i.ibb.co.com/7WvJpd9/Tacos-al-Pastor.jpg",
+    "foodCategory": "Lunch",
     "quantity": 20,
     "price": 9.99,
     "foodOrigin": "Mexico",
     "description": "Corn tortillas filled with marinated pork, pineapple, and cilantro. Ingredients include pork shoulder, adobo spices, pineapple, and lime juice. Grilled and served hot.",
-    "purchase_count": 7
+    "purchase_count": 7,
+    "email": "baust.cse.200101076@gmail.com",
+    "username": "076_Talath Un Nabi (Anik)"
   },
   {
     "foodName": "Butter Chicken",
-    "foodImage": "https://demo-themewinter.com/gloreya/restaurant/wp-content/uploads/sites/2/2021/01/gallery_image6.jpg",
-    "foodCategory": "Indian",
+    "foodImage": "https://i.ibb.co.com/4ZK21Hs/Butter-Chicken.jpg",
+    "foodCategory": "Dinner",
     "quantity": 12,
     "price": 11.49,
-    "foodOrigin": "India",
+    "foodOrigin": "Bangladesh",
     "description": "Tender chicken cooked in a creamy tomato-based sauce. Ingredients include chicken, butter, cream, and a blend of Indian spices. Served with naan or basmati rice.",
-    "purchase_count": 0
+    "purchase_count": 4,
+    "email": "baust.cse.200101076@gmail.com",
+    "username": "076_Talath Un Nabi (Anik)"
   },
   {
     "foodName": "Pad Thai",
-    "foodImage": "https://demo-themewinter.com/gloreya/restaurant/wp-content/uploads/sites/2/2021/01/gallery_image6.jpg",
-    "foodCategory": "Thai",
+    "foodImage": "https://i.ibb.co.com/rt0R7nJ/Pad-Thai.jpg",
+    "foodCategory": "Lunch",
     "quantity": 18,
     "price": 10.99,
     "foodOrigin": "Thailand",
     "description": "Stir-fried rice noodles with shrimp, tofu, eggs, and peanuts. Ingredients include tamarind paste, fish sauce, and palm sugar. Garnished with lime and fresh herbs.",
-    "purchase_count": 5
+    "purchase_count": 15,
+    "email": "baust.cse.200101076@gmail.com",
+    "username": "076_Talath Un Nabi (Anik)"
   },
   {
     "foodName": "Beef Bourguignon",
-    "foodImage": "https://demo-themewinter.com/gloreya/restaurant/wp-content/uploads/sites/2/2021/01/gallery_image6.jpg",
-    "foodCategory": "French",
+    "foodImage": "https://i.ibb.co.com/zVRgFsB/Beef-Bourguignon.jpg",
+    "foodCategory": "Dinner",
     "quantity": 8,
     "price": 14.99,
     "foodOrigin": "France",
     "description": "Slow-cooked beef stew with red wine, mushrooms, and onions. Ingredients include beef chuck, Burgundy wine, carrots, and thyme. Served with crusty bread.",
-    "purchase_count": 2
+    "purchase_count": 2,
+    "email": "baust.cse.200101076@gmail.com",
+    "username": "076_Talath Un Nabi (Anik)"
   },
   {
     "foodName": "Peking Duck",
-    "foodImage": "https://demo-themewinter.com/gloreya/restaurant/wp-content/uploads/sites/2/2021/01/gallery_image6.jpg",
-    "foodCategory": "Chinese",
+    "foodImage": "https://i.ibb.co.com/Hzw9Dgd/Peking-Duck.webp",
+    "foodCategory": "Dinner",
     "quantity": 6,
     "price": 22.99,
     "foodOrigin": "China",
     "description": "Roasted duck served with thin pancakes, hoisin sauce, and scallions. Ingredients include duck, soy sauce, and five-spice powder. Prepared using traditional techniques.",
-    "purchase_count": 3
+    "purchase_count": 3,
+    "email": "baust.cse.200101076@gmail.com",
+    "username": "076_Talath Un Nabi (Anik)"
   },
   {
     "foodName": "Cheeseburger",
-    "foodImage": "https://demo-themewinter.com/gloreya/restaurant/wp-content/uploads/sites/2/2021/01/gallery_image6.jpg",
-    "foodCategory": "American",
+    "foodImage": "https://i.ibb.co.com/YhbN1br/Cheeseburger.jpg",
+    "foodCategory": "Snack",
     "quantity": 25,
     "price": 7.99,
     "foodOrigin": "United States",
     "description": "A juicy beef patty topped with cheddar cheese, lettuce, and tomato. Ingredients include ground beef, cheese, sesame bun, and condiments. Grilled to perfection.",
-    "purchase_count": 19
+    "purchase_count": 11,
+    "email": "baust.cse.200101076@gmail.com",
+    "username": "076_Talath Un Nabi (Anik)"
   },
   {
     "foodName": "Paella Valenciana",
-    "foodImage": "https://demo-themewinter.com/gloreya/restaurant/wp-content/uploads/sites/2/2021/01/gallery_image6.jpg",
-    "foodCategory": "Spanish",
+    "foodImage": "https://i.ibb.co.com/DktV35w/Paella-Valenciana.jpg",
+    "foodCategory": "Dinner",
     "quantity": 10,
     "price": 15.49,
     "foodOrigin": "Spain",
     "description": "A traditional rice dish with chicken, rabbit, and green beans. Ingredients include bomba rice, saffron, olive oil, and paprika. Cooked in a large shallow pan.",
-    "purchase_count": 12
+    "purchase_count": 18,
+    "email": "baust.cse.200101076@gmail.com",
+    "username": "076_Talath Un Nabi (Anik)"
   },
   {
     "foodName": "Baklava",
-    "foodImage": "https://demo-themewinter.com/gloreya/restaurant/wp-content/uploads/sites/2/2021/01/gallery_image6.jpg",
-    "foodCategory": "Middle Eastern",
+    "foodImage": "https://i.ibb.co.com/68PY6P3/Baklava.jpg",
+    "foodCategory": "Dessert",
     "quantity": 30,
     "price": 5.99,
     "foodOrigin": "Turkey",
     "description": "A sweet pastry made with layers of phyllo dough, nuts, and honey. Ingredients include pistachios, walnuts, butter, and sugar syrup. Baked until golden and crisp.",
-    "purchase_count": 2
+    "purchase_count": 10,
+    "email": "baust.cse.200101076@gmail.com",
+    "username": "076_Talath Un Nabi (Anik)"
   }
 ]
