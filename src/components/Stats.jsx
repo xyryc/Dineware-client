@@ -10,7 +10,7 @@ const Stats = () => {
   return (
     <div className="mt-36 mb-44">
       <div className="text-center pb-10">
-        <h1 className="text-5xl font-semibold mb-16">
+        <h1 className="text-5xl font-semibold mb-16 font-dancing-script">
         We believe in making quality food
         </h1>
       </div>

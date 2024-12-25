@@ -46,7 +46,7 @@ const AllFoods = () => {
       </div>
 
       {/* searchbar */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-5 my-6">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-5 my-6 font-dancing-script">
         <div>
           <select
             className="p-4 rounded-lg outline-1 outline"

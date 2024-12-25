@@ -102,7 +102,7 @@ const Gallery = () => {
       </div>
 
       {/* Hover Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full lg:w-[70%] my-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full lg:w-[70%] my-6 font-dancing-script">
         {slides.map((slide, index) => (
           <div
             key={index}

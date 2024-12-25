@@ -12,7 +12,7 @@ We are seeking a skilled MERN Stack Developer to develop a full-stack Restaurant
 - Ensure the website is fully responsive on mobile, tablet, and desktop.
 - Secure Firebase configuration keys using environment variables. ✅
 - Secure your MongoDB credentials using the environment variable. ✅
-- Create a design that encourages recruiters. Color contrast should please the eye & ensure that the website has proper alignment, space and The website does not express gobindo design
+- Create a design that encourages recruiters. Color contrast should please the eye & ensure that the website has proper alignment, space and The website does not express gobindo design ✅
 
 ---
 
@@ -37,7 +37,7 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
 - **Conditional login/logout** ✅
 - **Profile Image**. This will only show if the user is logged in, Otherwise show a login button. [Click Here for more details on this](#profile-image-functionalities) ✅
 
-2. **Main Section**: Main Section will show different pages based on routes.
+2. **Main Section**: Main Section will show different pages based on routes. ✅
 3. **Footer**: A footer with all relevant information and eye-catchy design ✅
 
 #### **Authentication System**
@@ -56,8 +56,8 @@ If your Deployment is not okay you will get 0 and may miss the chance of our upc
 
 **Home page(public)**
 
-- **Banner section**: A slider/banner/ a meaningful section. Inside the banner, there will be a Heading Title, a Short Description, and a button that will redirect the user to the All Foods page.
-- **Top Foods section**: Show 6 top-selling Food Items depending on the number of purchases of a food item: (see single food page to know about purchase count) including the following pieces of information:  ✅
+- **Banner section**: A slider/banner/ a meaningful section. Inside the banner, there will be a Heading Title, a Short Description, and a button that will redirect the user to the All Foods page. ✅
+- **Top Foods section**: Show 6 top-selling Food Items depending on the number of purchases of a food item: (see single food page to know about purchase count) including the following pieces of information: ✅
   - Which data you want to show is up to you. ✅
   - Details Button. On clicking this _button_ will navigate to the Single Food Page. ✅
   - See All Button: Below the 6 cards, there will be a see all button that will redirect the user to the All Foods page. ✅
@@ -145,8 +145,8 @@ In this route, show all food items ordered by the logged-in user. You have to fi
 2. **Food Search Functionality**: In **All Foods** page implement a search functionality where foods can be searched using its name. ✅
 
 3. **JWT Authentication**: Upon login, you will create a JWT token and store it on the client side. ✅
- You will send the token with the call and verify the user. Implementing 401 and 403 is optional. Ensure you have implemented the JWT token, create a token, and store it on the client side for both email/password-based authentication and social login.  ✅
- You must implement JWT on your private routes. 
+   You will send the token with the call and verify the user. Implementing 401 and 403 is optional. Ensure you have implemented the JWT token, create a token, and store it on the client side for both email/password-based authentication and social login. ✅
+   You must implement JWT on your private routes.
 
 4. **Theme Customization** ✅
    Add a Theme Toggling Button for changing themes from light to dark / dark to light. By changing the theme, it will make the full system dark / light based on user interaction. ✅
@@ -163,7 +163,7 @@ On clicking the profile image on navbar show a dropdown menu with 3 links.
 
 #### **What to Submit**
 
-1. Live Site Link :  ✅
+1. Live Site Link : ✅
 2. GitHub Repository ( **server** ) : ✅
 3. GitHub Repository ( **client** ) : ✅
 
@@ -172,7 +172,7 @@ On clicking the profile image on navbar show a dropdown menu with 3 links.
 1.  Add a spinner when the data is in a loading state. You can add a gif/jpg, use any package, or customize it using CSS. ✅
 2.  Explore and implement any of the animations from the Framer Motion. ✅
 3.  Explore and implement Tanstack query mutations in your api. ✅
-4.  Add multiple filtering systems on all food items pages. The filtering system should be implemented on the server side. Think about MongoDB $and, $or operators. 
+4.  Add multiple filtering systems on all food items pages. The filtering system should be implemented on the server side. Think about MongoDB $and, $or operators.
 5.  Pagination: on all Food pages \=\> At the bottom of the cards section you need to create a pagination. First, you have to load 9 cards of data from the database and then you will show the others based on the page number. Implement backend pagination.
 6.  Gallery section: On this page, you can implement infinite image scrolling. Initially, there will be 12 card images. After scrolling down the rest of the image will be shown. Also, add simple animation when the image loads.
 
@@ -187,5 +187,9 @@ Some Guidelines:
 
 # TODO
 
-- purchase page validation
-- fix food category
+- purchase page validation ✅
+- fix food category ✅
+- add readme
+- jwt token
+- update food images
+- fix banner

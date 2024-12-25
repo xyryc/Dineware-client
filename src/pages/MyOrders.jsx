@@ -74,7 +74,7 @@ const MyOrders = () => {
       <div className="overflow-x-auto lg:overflow-hidden my-6">
         <table className="table">
           {/* Table head */}
-          <thead className="bg-gray-800 text-white">
+          <thead className="bg-gray-800 text-white font-dancing-script">
             <tr>
               <th></th>
               <th>Index</th>

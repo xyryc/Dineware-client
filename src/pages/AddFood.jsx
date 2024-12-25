@@ -14,20 +14,18 @@ const AddFood = () => {
     mutationFn: async (foodData) => {
       await axiosSecure.post(`/add-food`, foodData);
     },
-
     onSuccess: () => {
       toast.success("Food added to database");
       queryClient.invalidateQueries({ queryKey: ["foods"] });
       navigate("/my-foods");
     },
     onError: () => {
-      toast.error("Error occured while adding to db");
+      toast.error("Error occurred while adding to db");
     },
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const form = e.target;
     const foodName = form.food_title.value;
     const foodImage = form.image.value;
@@ -58,7 +56,7 @@ const AddFood = () => {
   return (
     <div>
       <div className="flex flex-col items-center justify-center my-2">
-        <h1 className="font-bold">Add Food</h1>
+        <h1 className="font-bold text-lg">Add Food</h1>
         <div className="breadcrumbs text-sm">
           <ul>
             <li>
@@ -72,44 +70,52 @@ const AddFood = () => {
       </div>
 
       <div className="flex justify-center items-center min-h-[calc(100vh-306px)] my-6">
-        <section className="p-2 md:p-6 mx-auto bg-white rounded-md shadow-md ">
-          <h2 className="text-lg font-semibold text-gray-700">Add a Food</h2>
+        <section className="p-4 md:p-6 mx-auto bg-base-100 text-base-content rounded-md shadow-md w-full max-w-3xl">
+          <h2 className="text-lg font-semibold mb-4">Add a Food</h2>
 
           <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div className="sm:col-span-2">
-                <label className="text-gray-700 ">Food Name</label>
+                <label className="label">
+                  <span className="label-text">Food Name</span>
+                </label>
                 <input
                   name="food_title"
                   type="text"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+                  className="input input-bordered w-full"
                 />
               </div>
 
               <div>
-                <label className="text-gray-700">Price</label>
+                <label className="label">
+                  <span className="label-text">Price</span>
+                </label>
                 <input
                   name="price"
                   type="number"
                   step="0.01"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+                  className="input input-bordered w-full"
                 />
               </div>
 
               <div>
-                <label className="text-gray-700">Available Quantity</label>
+                <label className="label">
+                  <span className="label-text">Available Quantity</span>
+                </label>
                 <input
                   name="quantity"
                   type="number"
-                  className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+                  className="input input-bordered w-full"
                 />
               </div>
 
-              <div className="flex flex-col gap-2">
-                <label className="text-gray-700 ">Food Category</label>
+              <div>
+                <label className="label">
+                  <span className="label-text">Food Category</span>
+                </label>
                 <select
                   name="food_category"
-                  className="border p-2 rounded-md"
+                  className="select select-bordered w-full"
                   defaultValue=""
                 >
                   <option value="" disabled>
@@ -126,11 +132,13 @@ const AddFood = () => {
                 </select>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <label className="text-gray-700 ">Food Origin (Country)</label>
+              <div>
+                <label className="label">
+                  <span className="label-text">Food Origin (Country)</span>
+                </label>
                 <select
                   name="food_origin"
-                  className="border p-2 rounded-md"
+                  className="select select-bordered w-full"
                   defaultValue=""
                 >
                   <option value="" disabled>
@@ -151,54 +159,56 @@ const AddFood = () => {
             </div>
 
             <div className="mt-4">
-              <label className="text-gray-700">Image URL</label>
+              <label className="label">
+                <span className="label-text">Image URL</span>
+              </label>
               <input
                 type="text"
                 name="image"
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
+                className="input input-bordered w-full"
               />
             </div>
 
-            <div className="flex flex-col gap-2 mt-4">
-              <label className="text-gray-700 " htmlFor="description">
-                Description
+            <div className="mt-4">
+              <label className="label">
+                <span className="label-text">Description</span>
               </label>
               <textarea
-                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
                 name="description"
-                id="description"
+                className="textarea textarea-bordered w-full"
               ></textarea>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-4">
-              <div>
-                <label className="text-gray-700 " htmlFor="emailAddress">
-                  Email Address
-                </label>
-                <input
-                  id="emailAddress"
-                  type="email"
-                  name="email"
-                  defaultValue={user?.email}
-                  readOnly
-                  className="block  px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
-                />
-              </div>
-
-              <div>
-                <label className="text-gray-700 ">Username</label>
-                <input
-                  type="text"
-                  name="name"
-                  defaultValue={user?.displayName}
-                  readOnly
-                  className="block px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring"
-                />
-              </div>
+            <div className="mt-4">
+              <label className="label">
+                <span className="label-text">Email Address</span>
+              </label>
+              <input
+                type="email"
+                defaultValue={user?.email}
+                readOnly
+                className="input input-bordered w-full"
+              />
             </div>
 
-            <div className="flex justify-end mt-6">
-              <button className="disabled:cursor-not-allowed px-8 py-2.5 leading-5 text-white transition-colors duration-300 transhtmlForm bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+            <div className="mt-4">
+              <label className="label">
+                <span className="label-text">Username</span>
+              </label>
+              <input
+                type="text"
+                defaultValue={user?.displayName}
+                readOnly
+                className="input input-bordered w-full"
+              />
+            </div>
+
+            <div className="mt-6">
+              <button
+                type="submit"
+                className="btn btn-primary w-full"
+                disabled={isLoading}
+              >
                 {isLoading ? "Adding Food..." : "Add Food"}
               </button>
             </div>

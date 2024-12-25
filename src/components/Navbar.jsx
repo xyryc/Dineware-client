@@ -9,21 +9,21 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink className={({isActive})=> isActive ? "underline hover:bg-transparent" : "" } to="/">Home</NavLink>
       </li>
 
       <li>
-        <NavLink to="/foods">All Foods</NavLink>
+        <NavLink className={({isActive})=> isActive ? "underline hover:bg-transparent" : "" } to="/foods">All Foods</NavLink>
       </li>
 
       <li>
-        <NavLink to="/gallery">Gallery</NavLink>
+        <NavLink className={({isActive})=> isActive ? "underline hover:bg-transparent" : "" } to="/gallery">Gallery</NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 font-dancing-script px-2 py-0">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,7 +49,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-xl">
+        <Link to="/" className="btn btn-ghost text-xl font-bold">
           Dineware
         </Link>
       </div>
@@ -78,7 +78,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
               >
                 <li>
                   <Link to="/my-foods">My Foods</Link>

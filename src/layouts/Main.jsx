@@ -5,7 +5,7 @@ import ScrollToTop from "../components/ScrollToTop";
 
 const Main = () => {
   return (
-    <div className="font-inter">
+    <div className="font-poppins">
       <Navbar />
 
       <ScrollToTop />
