@@ -1,8 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { BiCategory } from "react-icons/bi";
 import { Link, useParams } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
+import { IoFastFoodSharp } from "react-icons/io5";
+import { motion } from "framer-motion";
+import { Fade } from "react-awesome-reveal";
+import { AiTwotoneFire } from "react-icons/ai";
+import { GiShoppingCart } from "react-icons/gi";
+import { PiMapPinArea } from "react-icons/pi";
 
 const FoodDetails = () => {
   const { id } = useParams();
@@ -21,73 +26,109 @@ const FoodDetails = () => {
     return <LoadingSpinner />;
   }
 
+  console.log(singleFood);
+
   return (
     <div className="container mx-auto px-4 mb-20">
-      <div className="breadcrumbs text-sm pt-2 pb-6">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <a>{singleFood.foodCategory}</a>
-          </li>
-          <li>
-            <a>{singleFood.foodName}</a>
-          </li>
-        </ul>
-      </div>
-
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 justify-items-center place-items-center gap-10">
-        <div className="w-full border h-96 flex justify-center items-center overflow-hidden bg-base-200">
-          <img
-            className="object-scale-down h-full"
-            src={singleFood.foodImage}
-            alt={singleFood.foodName}
-          />
-        </div>
-
-        <div className="w-full flex flex-col h-full">
-          <div>
-            <p className="flex items-center gap-2">
-              <BiCategory /> {singleFood.foodCategory}
-            </p>
-            <h1 className="text-5xl font-bold font-bebas-neue my-2">
-              {singleFood.foodName}
-            </h1>
-            <p className="text-3xl">
-              ₽ <span className="font-black">{singleFood.price}</span>
-            </p>
-            {/* <div className="flex items-center gap-2">
-              <div className="flex items-center">
-                {[...Array(5)].map((_, index) => (
-                  <FaStar
-                    key={index}
-                    size={20}
-                    color={index < rating ? "#2171ad" : "#E5E7EB"}
-                  />
-                ))}
-              </div>
-              <p>{rating}</p>
-            </div> */}
-
-            <div className="divider"></div>
-          </div>
-
-          <ul className="flex-grow space-y-2 list-disc list-inside text-balance font-light">
-            <li>Description: {singleFood.description}</li>
-            <li>Food Origin: {singleFood.foodOrigin}</li>
-            <li>Purchase count: {singleFood.purchase_count}</li>
-            <li>Available Quantity: {singleFood.quantity}</li>
+      <div className="flex flex-col items-center justify-center my-2">
+        <h1 className="font-bold">{singleFood.foodName}</h1>
+        <div className="breadcrumbs text-sm">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/foods">All Foods</Link>
+            </li>
+            <li>
+              <a>{singleFood.foodName}</a>
+            </li>
           </ul>
-
-          <Link
-            to={`/food/purchase/${singleFood._id}`}
-            className="btn btn-outline mt-3"
-          >
-            Purchase
-          </Link>
         </div>
       </div>
+
+      <motion.div
+        className="min-h-screen bg-base-100"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="max-w-5xl mx-auto bg-base-200 shadow-xl rounded-lg overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {/* Image Section */}
+            <Fade direction="left" duration={800}>
+              <img
+                src={singleFood.foodImage}
+                alt={singleFood.foodName}
+                className="object-cover w-full h-full"
+              />
+            </Fade>
+
+            {/* Details Section */}
+            <Fade direction="right" duration={800}>
+              <div className="p-6 md:p-10 space-y-6">
+                {/* Food Name and Price */}
+                <div className="space-y-2">
+                  <h1 className="text-4xl font-dancing-script font-bold">
+                    {singleFood.foodName}
+                  </h1>
+                  <p className="text-2xl font-black">$ {singleFood.price}</p>
+                </div>
+
+                <div className="divider"></div>
+
+                {/* Food Description and Stats */}
+                <div className="space-y-4">
+                  <p className="text-pretty">{singleFood.description}</p>
+
+                  <p className="flex items-center gap-3 text-lg">
+                    <IoFastFoodSharp className=" text-2xl" />
+                    <span className="font-semibold">Category:</span>{" "}
+                    <span className="text-base-content font-poppins">
+                      {singleFood.foodCategory}
+                    </span>
+                  </p>
+
+                  <p className="flex items-center gap-3 text-lg">
+                    <PiMapPinArea className=" text-2xl" />
+                    <span className="font-semibold">Food Origin:</span>{" "}
+                    <span className="text-base-content font-poppins">
+                      {singleFood.foodOrigin}
+                    </span>
+                  </p>
+
+                  <p className="flex items-center gap-3 text-lg">
+                    <AiTwotoneFire className=" text-2xl" />
+                    <span className="font-semibold">Sold:</span>{" "}
+                    <span className="text-base-content font-poppins">
+                      {singleFood.purchase_count}
+                    </span>
+                  </p>
+
+                  <p className="flex items-center gap-3 text-lg">
+                    <GiShoppingCart className=" text-2xl" />
+                    <span className="font-semibold">
+                      Available Quantity:
+                    </span>{" "}
+                    <span className="text-base-content font-poppins">
+                      {singleFood.quantity}
+                    </span>
+                  </p>
+                </div>
+
+                {/* Action Button */}
+                <Link
+                  to={`/food/purchase/${singleFood._id}`}
+                  className="btn btn-primary btn-lg mt-4 w-full md:w-auto"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  Purchase Now
+                </Link>
+              </div>
+            </Fade>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 };
