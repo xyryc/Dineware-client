@@ -132,7 +132,7 @@ This page will have a form having the following fields:
 
 In this route, show all food items ordered by the logged-in user. You have to filter the data based on the logged-in user email. You can show all the food items on the table/card. Each row/card will have: ✅
 
-1. Some Food info (example: food img, name, price, added time, food owner, etc)  ✅
+1. Some Food info (example: food img, name, price, added time, food owner, etc) ✅
 2. Buying date and time. In human readable format. Try to use [moment](https://momentjs.com/) for formatting date and time ✅
 3. a delete button/icon that will help the user delete the ordered item from the list ✅
 
@@ -192,18 +192,8 @@ Some Guidelines:
 - fix purchase page UI ✅
 - fix details page UI ✅
 - add readme ✅
-- fix buttons  ✅
+- fix buttons ✅
 - add 404 page ✅
-- jwt token 
-- build and deploy correctly 
-
-
-
-
-
-
-
-
-
-
-
+- jwt token
+- search box text size
+- build and deploy correctly

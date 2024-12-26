@@ -119,7 +119,7 @@ const FoodDetails = () => {
                 {/* Action Button */}
                 <Link
                   to={`/food/purchase/${singleFood._id}`}
-                  className="btn btn-outline mt-4 w-full md:w-auto"
+                  className="btn btn-outline mt-4 rounded-full w-full md:w-auto"
                 >
                   Purchase Now
                 </Link>

@@ -1,5 +1,4 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { AuthContext } from "../provider/AuthProvider";
@@ -15,10 +14,10 @@ const UpdateFood = () => {
   const navigate = useNavigate();
 
   const { data: myFood, isLoading } = useQuery({
-    queryKey: ["myFood"],
+    queryKey: ["newFood"],
     queryFn: async () => {
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}/food/${id}`
+      const { data } = await axiosSecure.get(
+        `/food/secure/${id}`
       );
       return data;
     },
@@ -223,7 +222,7 @@ const UpdateFood = () => {
             <div className="flex justify-end mt-6">
               <button
                 type="submit"
-                className={`btn bg-neutral text-white btn-outline ${
+                className={`btn bg-neutral text-white btn-outline rounded-full ${
                   isLoading && "loading"
                 }`}
               >

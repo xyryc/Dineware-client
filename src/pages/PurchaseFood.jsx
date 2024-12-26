@@ -1,6 +1,5 @@
 import { useState, useContext } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { AuthContext } from "../provider/AuthProvider";
@@ -16,8 +15,8 @@ const PurchaseFood = () => {
   const { data: singleFood, isFetching } = useQuery({
     queryKey: ["singleFood"],
     queryFn: async () => {
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}/food/${id}`
+      const { data } = await axiosSecure.get(
+        `/food/secure/${id}`
       );
       return data;
     },
@@ -195,7 +194,7 @@ const PurchaseFood = () => {
             <div className="col-span-1 md:col-span-2">
               <button
                 type="submit"
-                className={`btn btn-outline
+                className={`btn btn-outline rounded-full
               ${
                 (isOwnFood || isNotAvailable) &&
                 "btn-disabled bg-base-300 cursor-not-allowed text-base-content"
