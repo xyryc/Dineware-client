@@ -55,7 +55,7 @@ const MyOrders = () => {
       }
       `;
 
-  console.log(myOrders);
+  // console.log(myOrders);
 
   return (
     <div className="min-h-screen">

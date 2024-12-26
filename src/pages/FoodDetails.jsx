@@ -26,7 +26,7 @@ const FoodDetails = () => {
     return <LoadingSpinner />;
   }
 
-  console.log(singleFood);
+  // console.log(singleFood);
 
   return (
     <div className="container mx-auto px-4 mb-20">

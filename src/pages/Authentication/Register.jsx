@@ -7,7 +7,6 @@ import { AuthContext } from "../../provider/AuthProvider";
 const Register = () => {
   const { createNewUser, setUser, setLoading, updateUserProfile } =
     useContext(AuthContext);
-  console.log(location);
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
@@ -40,7 +39,7 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        console.log(user);
+        // console.log(user);
         toast.success("User registered successfully");
 
         updateUserProfile({ displayName: name, photoURL: photo })
@@ -49,12 +48,12 @@ const Register = () => {
           })
           .catch((err) => {
             toast.error(err.code);
-            console.log(err.message);
+            // console.log(err.message);
             setLoading(false);
           });
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         toast.error(error.code);
         setLoading(false);
       });

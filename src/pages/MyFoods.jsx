@@ -24,7 +24,7 @@ const MyFoods = () => {
     return <LoadingSpinner />;
   }
 
-  console.log(myFoods);
+  // console.log(myFoods);
 
   // Define a custom animation (optional)
   const fadeInUp = keyframes`
