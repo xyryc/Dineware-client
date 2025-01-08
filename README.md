@@ -4,13 +4,11 @@ Dineware is a modern and responsive food ordering platform designed to provide u
 
 ## Live
 
-Live: [dineware.web.app](https://dineware.web.app)
-
-Live Backup: [dineware.surge.sh](https://dineware.surge.sh)
-
-Client Repo: [https://github.com/xyryc/Dineware-client](https://github.com/xyryc/Dineware-client)
-
+Live: [dineware.web.app](https://dineware.web.app)  
+Live Backup: [dineware.surge.sh](https://dineware.surge.sh)  
+Client Repo: [https://github.com/xyryc/Dineware-client](https://github.com/xyryc/Dineware-client)  
 Server Repo: [https://github.com/xyryc/Dineware-server](https://github.com/xyryc/Dineware-server)
+
 
 ## Key Features
 
