@@ -18,7 +18,7 @@ const TopSellingFoods = () => {
 
   return (
     <div id="topSelling" className="my-24">
-      <h1 className="text-center font-semibold text-5xl mb-20 font-dancing-script">
+      <h1 className="text-center font-semibold text-5xl mb-10 font-dancing-script">
         Our Top Selling Foods
       </h1>
 

@@ -6,7 +6,9 @@ import ScrollToTop from "../components/ScrollToTop";
 const Main = () => {
   return (
     <div className="font-poppins">
-      <Navbar />
+      <div className="h-[68px]">
+        <Navbar />
+      </div>
 
       <ScrollToTop />
       {/* Outlet */}

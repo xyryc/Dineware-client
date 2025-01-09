@@ -198,4 +198,4 @@ Some Guidelines:
 - search box text size ✅
 - build and deploy correctly
 - footer text+links
-
+- handle no data

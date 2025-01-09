@@ -28,7 +28,7 @@ const slider = [
   },
   {
     id: 3,
-    image: "https://i.ibb.co.com/CnQDNfk/biriyani.jpg",
+    image: "https://i.ibb.co.com/PMyNdvF/eid-al-fitr-celebration-with-delicious-food.jpg",
     title: "Celebrate Tradition with Authentic Biriyani",
     description:
       "Enjoy the rich, aromatic flavors of our biriyani, prepared with care to bring you a taste of heritage.",

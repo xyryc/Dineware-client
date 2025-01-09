@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const OfferGrid = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-[15px] w-full sm:w-[80%] min-h-[400px] mx-auto font-poppins ">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-[15px] w-full sm:w-[80%] min-h-[400px] mx-auto font-poppins pb-10">
       <div className="col-span-1 lg:col-span-2 overflow-hidden flex justify-between flex-col rounded-sm row-span-1 lg:row-span-2 h-[170px] bg-white lg:h-full relative min-h-60 max-h-[520px]">
         <div className="px-8 absolute bottom-8 z-20 w-full lg:w-[70%]">
           <h4 className="text-5xl font-black text-white font-dancing-script drop-shadow-2xl">
@@ -11,7 +11,7 @@ const OfferGrid = () => {
           <p className="text-sm mt-3 text-[#FAFAFA]">
             Savor cheesy, freshly baked pizzas with irresistible toppings!
           </p>
-          <Link to="/foods" className="btn btn-sm mt-2 rounded-full">
+          <Link to="/foods" className="btn btn-sm mt-2 rounded-full bg-white text-black border-none">
             Order Now
           </Link>
         </div>
@@ -31,7 +31,7 @@ const OfferGrid = () => {
           <p className="text-sm mt-3 text-[#FAFAFA]">
             Enjoy crunchy tacos with savory fillings and fresh ingredients!
           </p>
-          <Link to="/foods" className="btn btn-sm mt-2 rounded-full">
+          <Link to="/foods" className="btn btn-sm mt-2 rounded-full bg-white text-black border-none">
             Order Now
           </Link>
         </div>
@@ -49,7 +49,7 @@ const OfferGrid = () => {
             Pasta Perfection
           </h4>
           <p className="text-sm mt-0.5 text-[#FAFAFA]">Rich, creamy pasta.</p>
-          <Link to="/foods" className="btn btn-xs mt-2 rounded-full">
+          <Link to="/foods" className="btn btn-xs mt-2 rounded-full bg-white text-black border-none">
             Order Now
           </Link>
         </div>
@@ -69,7 +69,7 @@ const OfferGrid = () => {
           <p className="text-sm mt-0.5 text-[#FAFAFA]">
             Juicy, flavorful burgers.
           </p>
-          <Link to="/foods" className="btn btn-xs mt-2 rounded-full">
+          <Link to="/foods" className="btn btn-xs mt-2 rounded-full bg-white text-black border-none">
             Order Now
           </Link>
         </div>

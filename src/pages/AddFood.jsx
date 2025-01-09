@@ -206,7 +206,7 @@ const AddFood = () => {
             <div className="mt-6">
               <button
                 type="submit"
-                className="btn btn-primary w-full"
+                className="btn btn-neutral w-full"
                 disabled={isLoading}
               >
                 {isLoading ? "Adding Food..." : "Add Food"}

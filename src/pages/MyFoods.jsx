@@ -54,115 +54,124 @@ const MyFoods = () => {
         </div>
       </div>
 
-      <div className="overflow-x-auto lg:overflow-hidden my-6">
-        <table className="table">
-          {/* Table head */}
-          <thead className="bg-gray-800 text-white font-dancing-script">
-            <tr>
-              <th></th>
-              <th>Index</th>
-              <th>Image</th>
-              <th>Name</th>
-              <th>Category</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Added by</th>
-              <th>Update</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* Table rows with reveal */}
-            {myFoods?.map((item, index) => (
-              <tr key={item._id}>
-                <td></td>
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {index + 1}
-                  </Reveal>
-                </td>
-
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    <div className="avatar">
-                      <div className="mask mask-squircle h-12 w-12">
-                        <img src={item.foodImage} alt={item.foodName} />
-                      </div>
-                    </div>
-                  </Reveal>
-                </td>
-
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {item.foodName}
-                  </Reveal>
-                </td>
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {item.foodCategory}
-                  </Reveal>
-                </td>
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {item.price}
-                  </Reveal>
-                </td>
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {item.quantity}
-                  </Reveal>
-                </td>
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {item.username || "-"}
-                  </Reveal>
-                </td>
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 60}
-                    duration={500}
-                  >
-                    <Link
-                      to={`/my-foods/update/${item._id}`}
-                      className="btn btn-sm"
-                    >
-                      <MdOutlineEdit />
-                    </Link>
-                  </Reveal>
-                </td>
+      {myFoods?.length === 0 ? (
+        <div className="flex flex-col items-center justify-center h-64">
+          <p className="text-lg font-bold">No foods added.</p>
+          <Link to="/add-food" className="btn btn-neutral mt-3">
+            Add Foods
+          </Link>
+        </div>
+      ) : (
+        <div className="overflow-x-auto lg:overflow-hidden my-6">
+          <table className="table">
+            {/* Table head */}
+            <thead className="bg-gray-800 text-white font-dancing-script">
+              <tr>
+                <th></th>
+                <th>Index</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Added by</th>
+                <th>Update</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {/* Table rows with reveal */}
+              {myFoods?.map((item, index) => (
+                <tr key={item._id}>
+                  <td></td>
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {index + 1}
+                    </Reveal>
+                  </td>
+
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      <div className="avatar">
+                        <div className="mask mask-squircle h-12 w-12">
+                          <img src={item.foodImage} alt={item.foodName} />
+                        </div>
+                      </div>
+                    </Reveal>
+                  </td>
+
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {item.foodName}
+                    </Reveal>
+                  </td>
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {item.foodCategory}
+                    </Reveal>
+                  </td>
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {item.price}
+                    </Reveal>
+                  </td>
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {item.quantity}
+                    </Reveal>
+                  </td>
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {item.username || "-"}
+                    </Reveal>
+                  </td>
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 60}
+                      duration={500}
+                    >
+                      <Link
+                        to={`/my-foods/update/${item._id}`}
+                        className="btn btn-sm"
+                      >
+                        <MdOutlineEdit />
+                      </Link>
+                    </Reveal>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };

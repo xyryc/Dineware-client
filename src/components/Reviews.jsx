@@ -14,10 +14,8 @@ const Reviews = () => {
 
   return (
     <div className="py-24">
-      <div className="text-center mb-16 font-dancing-script">
-        <h1 className="text-5xl font-semibold">
-          What Our Clients Are Saying
-        </h1>
+      <div className="text-center mb-10 font-dancing-script">
+        <h1 className="text-5xl font-semibold">What Our Clients Are Saying</h1>
       </div>
 
       <Fade cascade damping={0.1}>

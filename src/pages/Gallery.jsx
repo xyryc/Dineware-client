@@ -10,7 +10,7 @@ const Gallery = () => {
 
   const slides = [
     {
-      src: "https://i.ibb.co.com/CnQDNfk/biriyani.jpg",
+      src: "https://i.ibb.co.com/PMyNdvF/eid-al-fitr-celebration-with-delicious-food.jpg",
       alt: "Bangladeshi Biriyani",
       name: "Mohammad Anik",
       description: "Aromatic and flavorful Bangladeshi Biriyani.",

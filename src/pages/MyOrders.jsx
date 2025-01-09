@@ -10,7 +10,6 @@ import { keyframes } from "@emotion/react";
 import moment from "moment";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
-
 const MyOrders = () => {
   const queryClient = useQueryClient(); // Use the existing QueryClient
   const { user } = useContext(AuthContext);
@@ -73,118 +72,127 @@ const MyOrders = () => {
         </div>
       </div>
 
-      <div className="overflow-x-auto lg:overflow-hidden my-6">
-        <table className="table">
-          {/* Table head */}
-          <thead className="bg-gray-800 text-white font-dancing-script">
-            <tr>
-              <th></th>
-              <th>Index</th>
-              <th>Image</th>
-              <th>Name</th>
-              <th>Quantity</th>
-              <th>Price</th>
-              <th>Time</th>
-              <th>Food Owner</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* Table rows with reveal */}
-            {myOrders?.map((item, index) => (
-              <tr key={item._id}>
-                <td></td>
-
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {index + 1}
-                  </Reveal>
-                </td>
-
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    <div className="avatar">
-                      <div className="mask mask-squircle h-12 w-12">
-                        <img src={item.foodImage} alt={item.foodName} />
-                      </div>
-                    </div>
-                  </Reveal>
-                </td>
-
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {item.foodName}
-                  </Reveal>
-                </td>
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {`x` + item.purchase_quantity}
-                  </Reveal>
-                </td>
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {`$` + item.order_price}
-                  </Reveal>
-                </td>
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {moment(item.buyingDate).format("MMMM Do YYYY, h:mm a")}
-                  </Reveal>
-                </td>
-
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    {item.buyerName}
-                  </Reveal>
-                </td>
-
-                <td>
-                  <Reveal
-                    keyframes={fadeInUp}
-                    delay={index * 100}
-                    duration={500}
-                  >
-                    <button
-                      className="text-lg"
-                      onClick={() => mutate(item._id)}
-                    >
-                      <RiDeleteBin6Line/>
-                    </button>
-                  </Reveal>
-                </td>
+      {myOrders?.length === 0 ? (
+        <div className="flex flex-col items-center justify-center h-64">
+          <p className="text-lg font-bold">No orders found.</p>
+          <Link to="/foods" className="btn btn-neutral mt-3">
+            Browse Foods
+          </Link>
+        </div>
+      ) : (
+        <div className="overflow-x-auto lg:overflow-hidden my-6">
+          <table className="table">
+            {/* Table head */}
+            <thead className="bg-gray-800 text-white font-dancing-script">
+              <tr>
+                <th></th>
+                <th>Index</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Time</th>
+                <th>Food Owner</th>
+                <th>Action</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {/* Table rows with reveal */}
+              {myOrders?.map((item, index) => (
+                <tr key={item._id}>
+                  <td></td>
+
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {index + 1}
+                    </Reveal>
+                  </td>
+
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      <div className="avatar">
+                        <div className="mask mask-squircle h-12 w-12">
+                          <img src={item.foodImage} alt={item.foodName} />
+                        </div>
+                      </div>
+                    </Reveal>
+                  </td>
+
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {item.foodName}
+                    </Reveal>
+                  </td>
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {`x` + item.purchase_quantity}
+                    </Reveal>
+                  </td>
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {`$` + item.order_price}
+                    </Reveal>
+                  </td>
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {moment(item.buyingDate).format("MMMM Do YYYY, h:mm a")}
+                    </Reveal>
+                  </td>
+
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      {item.buyerName}
+                    </Reveal>
+                  </td>
+
+                  <td>
+                    <Reveal
+                      keyframes={fadeInUp}
+                      delay={index * 100}
+                      duration={500}
+                    >
+                      <button
+                        className="text-lg"
+                        onClick={() => mutate(item._id)}
+                      >
+                        <RiDeleteBin6Line />
+                      </button>
+                    </Reveal>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };
