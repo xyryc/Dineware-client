@@ -194,6 +194,8 @@ Some Guidelines:
 - add readme ✅
 - fix buttons ✅
 - add 404 page ✅
-- jwt token
-- search box text size
+- jwt token ✅
+- search box text size ✅
 - build and deploy correctly
+- footer text+links
+
