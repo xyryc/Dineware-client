@@ -3,10 +3,16 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../provider/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
-  const { createNewUser, setUser, setLoading, updateUserProfile } =
-    useContext(AuthContext);
+  const {
+    createNewUser,
+    setUser,
+    setLoading,
+    updateUserProfile,
+    signInWithGoogle,
+  } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
@@ -59,6 +65,21 @@ const Register = () => {
       });
   };
 
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        // console.log(result.user);
+        setUser(result.user);
+        toast.success(`Logged in as ${result.user?.email}`);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        // console.log(error);
+        toast.error(error.code);
+        setLoading(false);
+      });
+  };
+
   return (
     <div className=" flex justify-center items-center">
       <div className="card bg-base-100 w-full max-w-md shrink-0 rounded-md p-10 border">
@@ -67,6 +88,14 @@ const Register = () => {
         </h2>
         <div className="border-b-[1px] mt-8"></div>
         <form className="card-body" onSubmit={handleSubmit}>
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn btn-outline"
+            type="button"
+          >
+            <FcGoogle /> Login with Google
+          </button>
+
           {/* name input */}
           <div className="form-control">
             <label className="label">

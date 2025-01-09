@@ -70,7 +70,7 @@ const Login = () => {
         </h2>
         <div className="border-b-[1px] mt-8"></div>
 
-        <form onSubmit={handleSubmit} className="card-body ">
+        <form onSubmit={handleSubmit} className="card-body">
           <button
             onClick={handleGoogleSignIn}
             className="btn btn-outline"
