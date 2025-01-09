@@ -6,9 +6,8 @@ Dineware is a modern and responsive food ordering platform designed to provide u
 
 Live: [dineware.web.app](https://dineware.web.app)  
 Live Backup: [dineware.surge.sh](https://dineware.surge.sh)  
-Client Repo: [https://github.com/xyryc/Dineware-client](https://github.com/xyryc/Dineware-client)  
-Server Repo: [https://github.com/xyryc/Dineware-server](https://github.com/xyryc/Dineware-server)
-
+Client Repo: [github.com/xyryc/Dineware-client](https://github.com/xyryc/Dineware-client)  
+Server Repo: [github.com/xyryc/Dineware-server](https://github.com/xyryc/Dineware-server)
 
 ## Key Features
 
@@ -22,23 +21,14 @@ Server Repo: [https://github.com/xyryc/Dineware-server](https://github.com/xyryc
 - **Real-time Updates**: Integrated with TanStack Query for efficient data fetching and caching.
 - **Toast Notifications**: User-friendly feedback with React Hot Toast.
 
-## Tech Stack
+## Technology Stack
 
-###
-
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=express" height="40" alt="express logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=nodejs" height="40" alt="nodejs logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=mongodb" height="40" alt="mongodb logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=firebase" height="40" alt="firebase logo"  />
-</div>
-
-###
+- **Frontend:** React.js, TailwindCSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB Atlas
+- **Authentication:** Firebase Authentication, JWT (JSON Web Token)
+- **Hosting:** Firebase Hosting
+- **Routing:** React Router DOM
 
 ## NPM Packages
 
