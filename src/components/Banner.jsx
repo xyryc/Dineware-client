@@ -59,12 +59,12 @@ export default function Banner() {
       >
         {slider.map((item) => (
           <SwiperSlide className="relative" key={item.id}>
-            <img src={item.image} className="w-full h-[80vh] object-cover" />
+            <img src={item.image} className="w-full h-[100vh] sm:h-[80vh] object-cover" />
 
             <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-black/10"></div>
 
             <div className="absolute top-[10%] left-[5%] text-white">
-              <h1 className="font-black text-5xl xl:text-[66px] w-3/4 md:w-6/12  capitalize">
+              <h1 className="font-black text-5xl xl:text-[66px] lg:leading-[80px] w-3/4 md:w-6/12 capitalize">
                 {item.title}
               </h1>
               <p className="text-sm xl:text-xl my-4 xl:mb-10 w-3/6 ">
